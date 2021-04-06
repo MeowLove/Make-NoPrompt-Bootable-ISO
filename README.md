@@ -11,7 +11,10 @@ If you have your own file, you can replace it with the startup file you own.
 
 CXT从Windows 20H2 x64中提取的，一般是兼容的。  
 如果您有自己的文件，您可以用自己的启动文件替换它。  
-- \efi\microsoft\boot
+
+- \efi\microsoft\boot\
+- \boot\
+- ...
 <br>
 
 # How to Use（如何使用）
