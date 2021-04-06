@@ -22,13 +22,17 @@ CXT从Windows 20H2 x64中提取的，一般是兼容的。
 - 2.remove \boot\bootfix.bin
 - 3.Replace the [Replaced_Files] directory file, find the same name, and replace them in your unzipped folder.
 - 4.Modify [Make_Bootable_NoPrompt_Windows_ISO.bat] the path of each file and folder to be your file local path.
-- 5.Run [Make_Bootable_NoPrompt_Windows_ISO.bat], and you will get a windows installation image that starts directly without prompting.
+- 5.Run [Make_Bootable_NoPrompt_Windows_ISO.bat], and you will get a windows installation image that starts directly without prompting.  
+
 <br>
+
 - 1、解压你下载的Windows ISO。
 - 2、移除 \boot\bootfix.bin
 - 3、替换【Replaced_Files】目录文件，在你的解压文件夹，寻找相同名称，替换掉他们。
 - 4、修改【Make_Bootable_NoPrompt_Windows_ISO.bat】各个文件和文件夹的路径为你的文件本地路径
 - 5、运行【Make_Bootable_NoPrompt_Windows_ISO.bat】，你将得到直接启动无需提示的Windows安装镜像。
+
+<br>
 
 # Reference and mention：
 [Oscdimg Command-Line 选项](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options)
