@@ -31,7 +31,7 @@ CXT从Windows 20H2 x64中提取的，一般是兼容的。
 <br>
 
 官方更新帖子：
-[Make-NoPrompt-Bootable-ISO（制作-无需按键提示-可启动Windows原版ISO）](https://www.cxthhhhh.com/2021/04/01/make-noprompt-bootable-iso-make-no-key-prompt-required-original-windows-iso-can-be-started.html)
+[Make-NoPrompt-Bootable-ISO（制作-无需按键提示-可启动Windows原版ISO）](https://www.cxthhhhh.com/2021/04/01/make-noprompt-bootable-iso-make-no-key-prompt-required-original-windows-iso-can-be-started.html)   
 [Make-NoPrompt-Bootable-ISO（制作-无需按键提示-可启动ISO）](https://bbs.cxthhhhh.com/thread-39-1-1.html)
 
 
