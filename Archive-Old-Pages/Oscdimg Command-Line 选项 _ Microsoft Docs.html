@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options -->
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus js-focus-visible theme-light" lang="zh-cn" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="true" data-target="docs" x-ms-format-detection="none" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="Oscdimg Command-Line 选项">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@docsmsft">
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="author" content="EliotSeattle">
+<meta name="bilingual_type" content="hover over">
+<meta name="breadcrumb_path" content="/windows-hardware/manufacture/breadcrumbs/toc.json">
+<meta name="depot_name" content="MSDN.manufacture-oem">
+<meta name="description" content="Oscdimg Command-Line 选项">
+<meta name="document_id" content="429993d5-0fc2-ae5a-fa78-0a2d2e85fe29">
+<meta name="document_version_independent_id" content="e0ccf773-2e9c-77b2-a7de-21088d5da08b">
+<meta name="enable_loc_sxs" content="true">
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/commercialization-docs-pr.zh-CN/blob/faf8489bd77be2930120b2f85cb40878f43974b1/manufacture/desktop/oscdimg-command-line-options.md">
+<meta name="locale" content="zh-cn">
+<meta name="ms.assetid" content="4c64a7fe-3bab-4ab9-97ed-1b14e820b0c8">
+<meta name="ms.author" content="eliotgra">
+<meta name="ms.contentlocale" content="zh-CN">
+<meta name="ms.date" content="05/02/2017">
+<meta name="ms.lasthandoff" content="01/18/2021">
+<meta name="ms.locfileid" content="98551889">
+<meta name="ms.openlocfilehash" content="d9a298470e6f959e42fc64cad60da273ad51abd5">
+<meta name="ms.prod" content="windows-hardware">
+<meta name="ms.sourcegitcommit" content="2c2028aa8c128a38fa18ce3ef81fb1836440c829">
+<meta name="ms.technology" content="windows-oem">
+<meta name="ms.topic" content="article">
+<meta name="ms.translationtype" content="MT">
+<meta name="MSHAttr" content="PreferredLib:/library/windows/hardware">
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/commercialization-docs-pr.zh-CN/blob/live-sxs/manufacture/desktop/oscdimg-command-line-options.md">
+<meta name="search.ms_docsetname" content="manufacture-oem">
+<meta name="search.ms_product" content="MSDN">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="site_name" content="Docs">
+<meta name="uhfHeaderId" content="MSDocsHeader-WinHW">
+<meta name="updated_at" content="2021-01-20 02:16 PM">
+<meta name="page_type" content="conceptual">
+<meta name="toc_rel" content="../toc.json">
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/zh-cn/MSDN.manufacture-oem/{branchName}{pdfName}">
+<meta name="word_count" content="4967">
+
+
+	<meta name="scope" content="OEM">
+<link href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options" rel="canonical">
+	<title>Oscdimg Command-Line 选项 | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/d84467c8.site-ltr.css">
+
+	
+
+
+	<script async="" defer="" crossorigin="anonymous" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/lux.js.下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/analytics.js.下載"></script><script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'zh-cn',
+			contentDir: 'ltr',
+			userLocale: 'zh-cn',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/commercialization-docs-pr.zh-CN/blob/live/manufacture/desktop/oscdimg-command-line-options.md',
+			extendBreadcrumb: false,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true,
+			hasRecommendations: false,
+			contributors: [
+						{ name: "EliotSeattle", url: "https://github.com/EliotSeattle" },
+						{ name: "olprod", url: "https://github.com/olprod" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/wcp-consent.js.下載"></script>
+	<script src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/ms.jsll-3.js.下載"></script>
+	<script>window.onedsAwa = window.awa; delete window.awa;</script>	
+	<script src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/jsll-4.js.下載"></script>
+	<script nomodule="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/bluebird.min.js.下載" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/fetch.umd.min.js.下載" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/template.min.js.下載" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/url.min.js.下載" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/8a64e446.index-polyfills.js.下載"></script>
+		<script src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/qrious.min.js.下載" integrity="sha384-h/SmU/qxwYnRlzklg9PKWpDwyma9UmKuOB//Pz6Cov5KkEqcaFF0vod43/XhoeyJ" crossorigin="anonymous"></script>
+
+		<script src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/a4e7b023.index-docs.js.下載"></script><style></style>
+<script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js.下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js.下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(1).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(1).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(2).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(3).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(2).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(3).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(4).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(4).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(5).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(5).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(6).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(6).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(7).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(7).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(8).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(8).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(9).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(9).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(10).下載"></script><script async="" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/t.js(10).下載"></script></head>
+
+<body lang="zh-cn" dir="ltr"><div style="display: none;" id="lightningjs-usabilla_live"><div><iframe frameborder="0" id="lightningjs-frame-usabilla_live" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/saved_resource.html"></iframe></div></div>
+	<div class="header-holder has-default-focus">
+		<a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">跳转至主内容</a>
+		
+		<div id="ignite-banner-holder" class="has-default-focus has-overflow-hidden"></div>
+		
+		<div hidden="" id="cookie-consent-holder"></div>
+		<!-- liquid-tag banners global -->
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization"><!----> <div class="nav-bar"><!---->  <div class="nav-bar-brand">
+		<a class="nav-bar-button" itemprop="url" href="https://www.microsoft.com/" aria-label="Microsoft">
+			<div class="nav-bar-logo" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope">
+				<svg xmlns="http://www.w3.org/2000/svg" width="108" height="23" viewBox="72 72 337 74" preserveAspectRatio="xMidYMin slice">
+					<g data-name="MS-symbol">
+						<clippath id="a">
+							<path transform="matrix(1 0 0 -1 0 216)" d="M0 216h482V0H0z"></path>
+						</clippath>
+						<g clip-path="url(#a)">
+							<path class="has-fill-current-color has-text-subtle" d="M394.942 104.59h-10.858v25.003h-7.38V104.59h-5.182v-5.965h5.182v-4.308c0-3.254 1.06-5.92 3.178-7.998 2.12-2.079 4.835-3.118 8.15-3.118.882 0 1.666.045 2.35.135a9.37 9.37 0 011.806.407v6.296c-.24-.14-.663-.31-1.265-.512-.603-.2-1.296-.3-2.078-.3-1.528 0-2.702.476-3.526 1.43-.824.954-1.235 2.365-1.235 4.232v3.736h10.858v-6.959l7.321-2.229v9.188h7.381v5.965h-7.38v14.49c0 1.91.345 3.254 1.038 4.037.693.783 1.782 1.175 3.27 1.175.42 0 .927-.1 1.52-.3a7.178 7.178 0 001.552-.724v6.025c-.463.261-1.23.502-2.305.723a15.742 15.742 0 01-3.178.331c-3.073 0-5.378-.817-6.914-2.455-1.537-1.637-2.305-4.102-2.305-7.396zm-48.407 9.73c0 3.233.733 5.703 2.2 7.411 1.465 1.707 3.564 2.56 6.295 2.56 2.652 0 4.67-.853 6.055-2.56 1.386-1.708 2.08-4.238 2.08-7.592 0-3.334-.719-5.849-2.155-7.547-1.436-1.697-3.45-2.545-6.04-2.545-2.67 0-4.745.888-6.22 2.666-1.477 1.777-2.215 4.313-2.215 7.607m-7.592.24c0-5.12 1.446-9.177 4.338-12.17 2.892-2.993 6.91-4.489 12.05-4.489 4.841 0 8.621 1.441 11.343 4.323 2.721 2.883 4.082 6.774 4.082 11.674 0 5.021-1.447 9.018-4.338 11.99-2.892 2.973-6.829 4.458-11.81 4.458-4.8 0-8.61-1.41-11.432-4.232-2.822-2.82-4.233-6.673-4.233-11.554m-16.417-7.802c0 1.045.331 1.863.994 2.456.662.592 2.128 1.34 4.398 2.243 2.912 1.166 4.956 2.476 6.131 3.932 1.175 1.456 1.762 3.22 1.762 5.287 0 2.912-1.12 5.252-3.359 7.02-2.24 1.767-5.267 2.65-9.083 2.65-1.285 0-2.706-.155-4.263-.467-1.556-.31-2.877-.707-3.96-1.19v-7.169a17.945 17.945 0 004.277 2.198c1.526.543 2.911.814 4.157.814 1.647 0 2.862-.23 3.645-.693.784-.46 1.175-1.235 1.175-2.319 0-1.005-.406-1.853-1.22-2.546-.813-.693-2.355-1.492-4.624-2.395-2.69-1.125-4.599-2.39-5.724-3.796-1.125-1.406-1.687-3.193-1.687-5.362 0-2.792 1.11-5.086 3.33-6.884 2.217-1.797 5.095-2.696 8.63-2.696 1.084 0 2.3.12 3.645.361 1.346.242 2.47.553 3.374.934v6.93c-.964-.644-2.089-1.195-3.374-1.658-1.286-.462-2.56-.693-3.826-.693-1.386 0-2.465.271-3.238.813-.774.543-1.16 1.286-1.16 2.23m-35.066 7.562c0 3.233.733 5.703 2.2 7.411 1.465 1.707 3.564 2.56 6.295 2.56 2.652 0 4.67-.853 6.055-2.56 1.386-1.708 2.08-4.238 2.08-7.592 0-3.334-.719-5.849-2.155-7.547-1.436-1.697-3.449-2.545-6.039-2.545-2.672 0-4.745.888-6.222 2.666-1.476 1.777-2.214 4.313-2.214 7.607m-7.592.24c0-5.12 1.446-9.177 4.338-12.17 2.893-2.993 6.91-4.489 12.051-4.489 4.84 0 8.621 1.441 11.342 4.323 2.721 2.883 4.082 6.774 4.082 11.674 0 5.021-1.446 9.018-4.338 11.99-2.892 2.973-6.828 4.458-11.809 4.458-4.8 0-8.61-1.41-11.433-4.232-2.822-2.82-4.233-6.673-4.233-11.554m-3.136-16.448c.582 0 1.105.041 1.567.121.462.08.853.18 1.175.301v7.38c-.382-.28-.939-.546-1.672-.798-.733-.25-1.622-.376-2.666-.376-1.788 0-3.299.753-4.534 2.26-1.235 1.505-1.853 3.825-1.853 6.958v15.635h-7.29V98.624h7.29v4.88h.12c.663-1.687 1.667-3.007 3.013-3.96 1.346-.954 2.962-1.432 4.85-1.432m-27.956 26.18c1.084 0 2.28-.25 3.585-.754a15.06 15.06 0 003.615-1.988v6.778c-1.165.663-2.485 1.165-3.962 1.506-1.475.342-3.098.512-4.865.512-4.559 0-8.265-1.44-11.116-4.323-2.852-2.88-4.278-6.562-4.278-11.04 0-4.98 1.456-9.083 4.37-12.307 2.91-3.224 7.037-4.835 12.38-4.835 1.366 0 2.746.176 4.143.527 1.395.352 2.504.758 3.328 1.22v6.99c-1.125-.824-2.274-1.462-3.45-1.914a9.966 9.966 0 00-3.599-.678c-2.872 0-5.192.934-6.959 2.802-1.768 1.868-2.652 4.388-2.652 7.562 0 3.132.85 5.573 2.546 7.32 1.697 1.748 4.002 2.621 6.914 2.621m-22.112 5.302h-7.29V98.624h7.29zm-8.044-39.916c0-1.205.437-2.214 1.311-3.028.874-.813 1.913-1.22 3.118-1.22 1.285 0 2.35.417 3.193 1.25.844.834 1.266 1.833 1.266 2.998 0 1.185-.432 2.18-1.296 2.982-.864.804-1.918 1.205-3.163 1.205-1.246 0-2.295-.406-3.148-1.219-.854-.815-1.28-1.803-1.28-2.968m-6.274-3.284v43.2h-7.5v-33.86h-.12l-13.408 33.86h-4.97l-13.738-33.86h-.09v33.86h-6.929v-43.2h10.755l12.412 32.024h.18l13.105-32.024z"></path>
+							<path d="M106.214 106.214H71.996V71.996h34.218z" fill="#f25022"></path>
+							<path d="M143.993 106.214h-34.218V71.996h34.218z" fill="#7fba00"></path>
+							<path d="M106.214 143.993H71.996v-34.218h34.218z" fill="#00a4ef"></path>
+							<path d="M143.993 143.993h-34.218v-34.218h34.218z" fill="#ffb900"></path>
+						</g>
+					</g>
+				</svg>
+			</div>
+		</a>
+	</div> 
+				
+		<div class="nav-bar-item is-hidden-tablet">
+			<div class="nav-bar-menu">
+				<button class="nav-bar-button is-title" title="全球导航" aria-expanded="false">
+					<span class="nav-bar-menu-title"><!---->文档<!----></span>
+					<div class="nav-bar-burger">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span class="nav-bar-burger-label"><!---->全球导航<!----></span>
+					</div>
+				</button>
+			</div>
+		</div>
+	
+				
+		<nav class="nav-bar-nav" role="navigation" aria-label="全球">
+			<ul class="nav-bar-nav-list">
+				
+		<li class="nav-bar-item is-category">
+			<a class="nav-bar-button is-title has-hover-underline" itemprop="url" href="https://docs.microsoft.com/zh-cn/">
+				<span><!---->Docs<!----></span>
+			</a>
+		</li>
+	
+				<!----> <li class="nav-bar-item">
+				<a class=" nav-bar-button has-hover-underline is-active" href="https://docs.microsoft.com/zh-cn/documentation">
+					<span><!---->文档<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class=" nav-bar-button has-hover-underline " href="https://docs.microsoft.com/zh-cn/learn/">
+					<span><!---->Learn<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class=" nav-bar-button has-hover-underline " href="https://docs.microsoft.com/zh-cn/answers/products/">
+					<span><!---->Q&amp;A<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class=" nav-bar-button has-hover-underline " href="https://docs.microsoft.com/zh-cn/samples/browse/">
+					<span><!---->代码示例<!----></span>
+				</a>
+		  </li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-73">
+			<span><!---->更多<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-73" aria-label="更多">
+			<!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button is-active" href="https://docs.microsoft.com/zh-cn/documentation"><!---->文档<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://docs.microsoft.com/zh-cn/learn/"><!---->Learn<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://docs.microsoft.com/zh-cn/answers/products/"><!---->Q&amp;A<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://docs.microsoft.com/zh-cn/samples/browse/"><!---->代码示例<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+			</ul>
+		</nav>
+	
+				<span class="nav-bar-spacer"></span>
+				
+		<div class="nav-bar-search " id="ax-74" hidden="">
+			
+		<form class="nav-bar-search-form" method="GET" name="nav-bar-search-form" role="search" id="nav-bar-search-form" aria-label="搜索" aria-expanded="false" action="https://docs.microsoft.com/zh-cn/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!----> <div class="control ">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="site-search-input" class="autocomplete-input input   is-small" type="search" name="terms" aria-expanded="false" aria-owns="ax-75-listbox" aria-activedescendant="" aria-label="搜索" placeholder="搜索">
+
+				<span aria-hidden="true" class="icon is-small is-left" hidden="">
+					<span class="has-text-primary docon docon-undefined"></span>
+				</span>
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+			</div>
+
+			<ul class="autocomplete-suggestions is-vertically-scrollable" role="listbox" id="ax-75-listbox" aria-label="site-search-input-suggestions" hidden="">
+				
+			</ul><!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			<input name="scope" hidden="" value="OEM">
+			
+			
+		</form>
+	
+		</div>
+		
+					<div class="nav-bar-search">
+						<!-- hidden when the width drops to tablet -->
+						
+		<form class="nav-bar-search-form" method="GET" name="nav-bar-search-form" role="search" id="nav-bar-search-form-desktop" aria-label="搜索" aria-expanded="false" action="https://docs.microsoft.com/zh-cn/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!----> <div class="control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="ax-76" class="autocomplete-input input control has-icons-left  is-small" type="search" name="terms" aria-expanded="false" aria-owns="ax-77-listbox" aria-activedescendant="" aria-label="搜索" placeholder="搜索">
+
+				<span aria-hidden="true" class="icon is-small is-left">
+					<span class="has-text-primary docon docon-search"></span>
+				</span>
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+			</div>
+
+			<ul class="autocomplete-suggestions is-vertically-scrollable" role="listbox" id="ax-77-listbox" aria-label="ax-76-suggestions" hidden="">
+				
+			</ul><!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			<input name="scope" hidden="" value="OEM">
+			
+			
+		</form>
+	
+					</div>
+			  
+		<div class="nav-bar-search " hidden="">
+			<div class="nav-bar-search-form-expander">
+				<button id="form-expander" class="nav-bar-button has-hover-underline " title="搜索" aria-expanded="false" aria-controls="ax-74">
+					
+		<span class="is-visually-hidden-mobile"><!---->搜索<!----></span>
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-search"></span>
+		</span>
+	
+				</button>
+			</div>
+		</div>
+	
+				
+		<div class="nav-bar-profile">
+			
+		<a class="docs-sign-in auth-status-determined not-authenticated" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#"> 登录 </a>
+	 
+		<div class="dropdown has-caret auth-status-determined authenticated">
+			<button class="dropdown-trigger button-reset" aria-controls="user-menu" aria-expanded="false" aria-label="你的帐户">
+				<figure class="image is-36x36">
+					<img class="has-body-background-medium is-rounded" alt="" data-profile-property="avatarUrl">
+				</figure>
+			</button>
+			<div class="dropdown-menu box has-flex-justify-content-start has-body-background" id="user-menu" role="menu">
+				<div class="media is-user-dir">
+					<div class="media-left">
+						<figure class="image is-48x48" aria-hidden="true">
+							<img class="has-body-background-medium is-rounded" aria-labelledby="displayName" data-profile-property="avatarUrl">
+						</figure>
+					</div>
+					<div class="media-content">
+						<p class="title is-size-large">
+							<span id="displayName" class="is-inline-truncated has-max-width-200" data-profile-property="displayName"></span>
+						</p>
+						<p class="subtitle is-size-small has-margin-bottom-none">
+							<span class="is-inline-truncated has-max-width-200" data-profile-property="upn"></span>
+						</p>
+					</div>
+				</div>
+				<ul class="has-padding-top-small has-padding-bottom-medium">
+					<li class="has-padding-top-extra-small has-padding-bottom-extra-small">
+						<a href="https://docs.microsoft.com/profile" data-profile-property="profileUrl"><!---->配置文件<!----></a>
+					</li>
+					<li class="has-padding-top-extra-small has-padding-bottom-extra-small">
+						<a href="https://docs.microsoft.com/profile" data-profile-property="bookmarksUrl"><!---->书签<!----></a>
+					</li>
+					<li class="has-padding-top-extra-small has-padding-bottom-extra-small">
+						<a href="https://docs.microsoft.com/profile" data-profile-property="collectionsUrl"><!---->集合<!----></a>
+					</li>
+					<li class="has-padding-top-extra-small">
+						<a href="https://docs.microsoft.com/profile" data-profile-property="challengesUrl"><!---->挑战<!----></a>
+					</li>
+				</ul>
+				<div class="has-border-top has-padding-top-medium">
+					<a class="docs-sign-out" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#"><!---->注销<!----></a>
+				</div>
+			</div>
+		</div>
+	
+		</div>
+	
+			 <!----></div> <div class="nav-bar has-border-top is-hidden-mobile"><!----> 
+		<a class="nav-bar-button is-title has-hover-underline" itemprop="url" href="https://docs.microsoft.com/windows-hardware/drivers/">
+			<span>
+				Windows 硬件开发人员
+				
+			</span>
+		</a>
+	 
+		
+		<nav class="nav-bar-nav" role="navigation" aria-label="站点">
+			<ul class="nav-bar-nav-list">
+				
+				<!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-78">
+			<span><!---->浏览<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-78" aria-label="浏览">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/design/device-experiences/device-experiences-scenarios"><!---->新的设备体验<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/usbcon"><!---->USB 驱动程序开发<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://developer.microsoft.com/windows/iot/"><!---->Windows IoT 核心版<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://www.microsoft.com/3d-print/windows-3d-printing"><!---->3D 打印<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-79">
+			<span><!---->下载<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-79" aria-label="下载">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/download-the-wdk"><!---->Windows 驱动程序工具包 (WDK)<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/test/hlk/windows-hardware-lab-kit"><!---->Hardware Lab Kit (HLK)<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/get-started/adk-install"><!---->评估和部署工具包 (ADK)<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-symbols"><!---->Windows 符号程序包<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-tools"><!---->Windows 调试器 (WinDbg)<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="nav-bar-item">
+				<a class="has-external-link-indicator nav-bar-button has-hover-underline " href="https://developer.microsoft.com/windows/hardware/events">
+					<span><!---->事件<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class="has-external-link-indicator nav-bar-button has-hover-underline " href="https://docs.microsoft.com/zh-cn/samples/browse/?products=windows-wdk">
+					<span><!---->示例<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class="has-external-link-indicator nav-bar-button has-hover-underline " href="https://developer.microsoft.com/windows/hardware/support">
+					<span><!---->支持<!----></span>
+				</a>
+		  </li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-80">
+			<span><!---->更多<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-80" aria-label="更多">
+			<!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  " aria-controls="ax-81">
+			<span><!---->浏览<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-81" aria-label="浏览">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/design/device-experiences/device-experiences-scenarios"><!---->新的设备体验<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/usbcon"><!---->USB 驱动程序开发<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://developer.microsoft.com/windows/iot/"><!---->Windows IoT 核心版<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://www.microsoft.com/3d-print/windows-3d-printing"><!---->3D 打印<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  " aria-controls="ax-82">
+			<span><!---->下载<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-right-light "></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-82" aria-label="下载">
+			<!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/download-the-wdk"><!---->Windows 驱动程序工具包 (WDK)<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/test/hlk/windows-hardware-lab-kit"><!---->Hardware Lab Kit (HLK)<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/get-started/adk-install"><!---->评估和部署工具包 (ADK)<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-symbols"><!---->Windows 符号程序包<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-tools"><!---->Windows 调试器 (WinDbg)<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="has-external-link-indicator nav-bar-button " href="https://developer.microsoft.com/windows/hardware/events"><!---->事件<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="has-external-link-indicator nav-bar-button " href="https://docs.microsoft.com/zh-cn/samples/browse/?products=windows-wdk"><!---->示例<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class="has-external-link-indicator nav-bar-button " href="https://developer.microsoft.com/windows/hardware/support"><!---->支持<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+			</ul>
+		</nav>
+	
+		<span class="nav-bar-spacer"></span>
+		
+		<ol class="nav-bar-list">
+			 
+		<li class="nav-bar-item ">
+			<a class="button is-small is-primary " href="https://partner.microsoft.com/dashboard">
+				仪表板
+			</a>
+		</li>
+	
+		</ol>
+	 
+	 <!----></div> <!----></header>		</div>
+
+						<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+					<nav class="breadcrumb-holder has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="痕迹">
+						<ul id="page-breadcrumbs" class="breadcrumbs"><!----><!---->
+			<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+				
+							<a itemprop="item" href="https://docs.microsoft.com/zh-cn/">
+								<span itemprop="name"><!---->Docs<!----></span>
+							</a>
+					  
+				<meta itemprop="position" content="1">
+			</li>
+		<!---->
+			<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+				
+							<a itemprop="item" href="https://docs.microsoft.com/zh-cn/windows">
+								<span itemprop="name"><!---->Windows<!----></span>
+							</a>
+					  
+				<meta itemprop="position" content="2">
+			</li>
+		<!---->
+			<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+				
+							<a itemprop="item" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/">
+								<span itemprop="name"><!---->制造商<!----></span>
+							</a>
+					  
+				<meta itemprop="position" content="3">
+			</li>
+		<!---->
+			<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+				
+							<a itemprop="item" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/">
+								<span itemprop="name"><!---->桌面设备制造<!----></span>
+							</a>
+					  
+				<meta itemprop="position" content="4">
+			</li>
+		<!----><!----></ul>
+					</nav>
+				<div class="content-header-controls">
+					<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">目录</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>退出焦点模式</span>
+					</button>
+				</div>
+				<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow page-action-holder">
+					<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+						<li>
+							<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="添加 Oscdimg Command-Line 选项 | Microsoft Docs 的书签" aria-pressed="false">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-single-bookmark"></span>
+								</span>
+								<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">书签</span>
+							</button>
+						</li>
+								<li id="contenteditbtn" hidden="">
+									<a href="https://github.com/MicrosoftDocs/commercialization-docs-pr.zh-CN/blob/live/manufacture/desktop/oscdimg-command-line-options.md" class="button is-text has-inner-focus is-icon-only-touch is-small" title="编辑本文" data-bi-name="edit" data-original_content_git_url="https://github.com/MicrosoftDocs/commercialization-docs-pr.zh-CN/blob/live-sxs/manufacture/desktop/oscdimg-command-line-options.md" data-original_content_git_url_template="{repo}/blob/{branch}/manufacture/desktop/oscdimg-command-line-options.md" data-pr_repo="" data-pr_branch="">
+									<span class="icon" aria-hidden="true">
+										<span class="docon docon-edit-outline"></span>
+									</span>
+									<span class="is-visually-hidden-touch is-hidden-portrait">编辑</span>
+								</a>
+							</li>
+						<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="共享本文" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">共享</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-twitter" data-bi-name="twitter" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Fwindows-hardware%2Fmanufacture%2Fdesktop%2Foscdimg-command-line-options%3FWT.mc_id%3Dtwitter&amp;text=Oscdimg%20Command-Line%20%E9%80%89%E9%A1%B9%20%7C%20Microsoft%20Docs&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Fwindows-hardware%2Fmanufacture%2Fdesktop%2Foscdimg-command-line-options%3FWT.mc_id%3Dtwitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Fwindows-hardware%2Fmanufacture%2Fdesktop%2Foscdimg-command-line-options%3FWT.mc_id%3Dlinkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-facebook" data-bi-name="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Fwindows-hardware%2Fmanufacture%2Fdesktop%2Foscdimg-command-line-options%3FWT.mc_id%3Dfacebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-email" data-bi-name="email" href="mailto:?subject=%5B%E5%85%B1%E4%BA%AB%E6%96%87%E7%AB%A0%5D%20Oscdimg%20Command-Line%20%E9%80%89%E9%A1%B9%20%7C%20Microsoft%20Docs&amp;body=Oscdimg%20Command-Line%20%E9%80%89%E9%A1%B9%20%7C%20Microsoft%20Docs%0A%0Ahttps%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Fwindows-hardware%2Fmanufacture%2Fdesktop%2Foscdimg-command-line-options%3FWT.mc_id%3Demail">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>电子邮件</span>
+				</a>
+			</li>
+			<li>
+				<span class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-wechat has-padding-top-extra-small has-padding-left-medium has-padding-right-medium">
+					<span class="icon">
+						<span class="docon docon-wechat has-text-primary" data-bi-name="wechat" aria-hidden="true"></span>
+					</span>
+					<span>微信</span>
+				</span>
+			</li>
+			<li>
+				<canvas class="qr-code" height="96" width="96"></canvas>
+			</li>
+		</ul>
+	</div>
+</div>						</li>
+						<li>
+
+<div class="lang-toggle-container" style="display: flex;">
+	<label for="language-toggle" aria-hidden="true" tabindex="-1">使用英语阅读</label>
+	<div class="checkbox-toggle-wrapper">
+		<input type="checkbox" id="language-toggle" aria-label="使用英语阅读" data-m="{&quot;cN&quot;:&quot;language-toggle&quot;,&quot;value&quot;:&quot;off&quot;}">
+		<label for="language-toggle" class="switch"></label>
+	</div>
+</div>						</li>
+					</ul>
+					<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="目录" data-bi-name="contents-expand">
+						<span class="icon">
+							<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+						</span>
+						<span class="contents-expand-title">目录</span>
+					</button>
+					<div class="is-invisible"></div>
+					<div class="is-hidden-tablet level-item is-flexible level-right">
+						<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="页面操作" data-bi-name="pageactions">
+							<span class="icon">
+								<span class="docon docon-more-vertical" aria-hidden="true"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"><!----> <section data-dismissable="disappearing" class="is-info alert is-banner">
+			<div class="uhf-container">
+				<button data-dismiss="" type="button" class="delete is-absolute has-top-zero has-right-zero has-margin-extra-small is-large">
+					<span class="visually-hidden"><!---->消除警报<!----></span>
+				</button>
+				<div class="columns">
+					<div class="column is-12">
+						<div class="level">
+							<div class="level-left has-flex-shrink">
+								<div class="level-item has-flex-shrink">
+									<p class="has-text-white-static disclaimer-title has-margin-top-extra-small has-margin-right-medium has-line-height-reset">
+										<span class="icon">
+											<span class="docon docon-status-error-outline" aria-hidden="true"></span>
+										</span>
+										<span><!---->本主题的部分内容可能是由机器翻译。<!----></span>
+									</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!----></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="is-fixed is-flex is-flex-column" role="navigation" aria-label="主要" style="width: 364px; top: 227px; bottom: 24px;" data-bi-name="left toc"><form action="javascript:" role="search" aria-label="搜索" class="has-margin-bottom-small"><label class="visually-hidden" for="ax-71">搜索</label><div class="autocomplete is-block" data-bi-name="autocomplete"><!----> <div class="control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="ax-71" class="autocomplete-input input control has-icons-left is-full-width is-small" type="text" aria-expanded="false" aria-owns="ax-72-listbox" aria-activedescendant="" placeholder="按标题筛选">
+
+				<span aria-hidden="true" class="icon is-small is-left">
+					<span class="has-text-primary docon docon-filter-settings"></span>
+				</span>
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+			</div>
+
+			<ul class="autocomplete-suggestions is-vertically-scrollable" role="listbox" id="ax-72-listbox" aria-label="ax-71-suggestions" hidden="">
+				
+			</ul><!----></div></form><ul class="tree is-vertically-scrollable has-flex-grow has-flex-shrink" role="tree" aria-label="目录" data-bi-name="tree" data-is-collapsible="true"><li role="none"><a aria-setsize="6" aria-level="1" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/get-started">Windows 10 入门</a></li><li role="none"><a aria-setsize="6" aria-level="1" aria-posinset="2" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/design">设计 Windows 10 设备</a></li><li role="none"><a aria-setsize="6" aria-level="1" aria-posinset="3" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/customize">自定义</a></li><li class="tree-item is-expanded" aria-setsize="6" aria-level="1" aria-posinset="4" role="treeitem" tabindex="-1" id="title-4-1" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>制造</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="3" aria-level="2" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/">制造</a></li><li class="tree-item is-expanded" aria-setsize="3" aria-level="2" aria-posinset="2" role="treeitem" tabindex="-1" id="title-4-1_2-2" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>台式机制造</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="10" aria-level="3" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/">台式机制造</a></li><li class="tree-item" aria-setsize="10" aria-level="3" aria-posinset="2" role="treeitem" tabindex="-1" id="title-4-1_2-2_2-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>部署指南和演练</span></li><li class="tree-item" aria-setsize="10" aria-level="3" aria-posinset="3" role="treeitem" tabindex="-1" id="title-4-1_2-2_3-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>启动和安装 Windows</span></li><li class="tree-item" aria-setsize="10" aria-level="3" aria-posinset="4" role="treeitem" tabindex="-1" id="title-4-1_2-2_4-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>修改映像</span></li><li class="tree-item" aria-setsize="10" aria-level="3" aria-posinset="5" role="treeitem" tabindex="-1" id="title-4-1_2-2_5-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>捕获和应用映像</span></li><li class="tree-item" aria-setsize="10" aria-level="3" aria-posinset="6" role="treeitem" tabindex="-1" id="title-4-1_2-2_6-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>自定义</span></li><li class="tree-item" aria-setsize="10" aria-level="3" aria-posinset="7" role="treeitem" tabindex="-1" id="title-4-1_2-2_7-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>本地化</span></li><li class="tree-item" aria-setsize="10" aria-level="3" aria-posinset="8" role="treeitem" tabindex="-1" id="title-4-1_2-2_8-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>优化</span></li><li class="tree-item" aria-setsize="10" aria-level="3" aria-posinset="9" role="treeitem" tabindex="-1" id="title-4-1_2-2_9-3" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>准备恢复工具</span></li><li class="tree-item is-expanded" aria-setsize="10" aria-level="3" aria-posinset="10" role="treeitem" tabindex="-1" id="title-4-1_2-2_10-3" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>部署工具参考</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="5" aria-level="4" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/windows-deployment-tools-reference">部署工具参考</a></li><li class="tree-item" aria-setsize="5" aria-level="4" aria-posinset="2" role="treeitem" tabindex="-1" id="title-4-1_2-2_10-3_2-4" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>DISM - 部署映像服务和管理</span></li><li class="tree-item" aria-setsize="5" aria-level="4" aria-posinset="3" role="treeitem" tabindex="-1" id="title-4-1_2-2_10-3_3-4" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Windows PE (WinPE)</span></li><li class="tree-item" aria-setsize="5" aria-level="4" aria-posinset="4" role="treeitem" tabindex="-1" id="title-4-1_2-2_10-3_4-4" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>Windows 安装程序</span></li><li class="tree-item is-expanded" aria-setsize="5" aria-level="4" aria-posinset="5" role="treeitem" tabindex="-1" id="title-4-1_2-2_10-3_5-4" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>命令行工具</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="5" aria-level="5" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/windows-deployment-command-line-tools-reference">命令行工具</a></li><li class="tree-item" aria-setsize="5" aria-level="5" aria-posinset="2" role="treeitem" tabindex="-1" id="title-4-1_2-2_10-3_5-4_2-5" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>BCDBoot 命令行选项</span></li><li role="none"><a aria-setsize="5" aria-level="5" aria-posinset="3" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/bcdedit-command-line-options">BCDEdit 命令行选项</a></li><li role="none"><a aria-setsize="5" aria-level="5" aria-posinset="4" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/bootsect-command-line-options">Bootsect 命令行选项</a></li><li role="none"><a aria-setsize="5" aria-level="5" aria-posinset="5" role="treeitem" tabindex="0" class="tree-item is-leaf has-external-link-indicator is-selected" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options" aria-current="page">Oscdimg 命令行选项</a></li></ul></li></ul></li></ul></li><li class="tree-item" aria-setsize="3" aria-level="2" aria-posinset="3" role="treeitem" tabindex="-1" id="title-4-1_3-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>IoT 核心版设备制造</span></li></ul></li><li role="none"><a aria-setsize="6" aria-level="1" aria-posinset="5" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/service">服务</a></li><li role="none"><a aria-setsize="6" aria-level="1" aria-posinset="6" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/windows-hardware/test">测试性能和兼容性</a></li></ul><a class="button is-small is-text has-flex-justify-content-start has-inner-focus has-margin-top-small has-border-top has-border-bottom has-flex-shrink-none" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/opbuildpdf/toc.pdf?branch=live" data-bi-name="downloadPdf" rel="nofollow"><!----> <span class="icon is-size-extra-small has-text-subtle">
+				<span aria-hidden="true" class="docon docon-dictionary-download"></span>
+			</span>
+			<span><!---->下载 PDF<!----></span><!----></a></nav>
+			</div>
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="zh-cn" dir="ltr">
+
+
+
+						<h1 id="oscdimg-command-line-options"><span data-ttu-id="929c9-103">Oscdimg Command-Line 选项</span><span class="sxs-lookup"><span data-stu-id="929c9-103">Oscdimg Command-Line Options</span></span></h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="zh-cn" dir="ltr">
+							<li>
+								<time class="" data-article-date="" aria-label="文章评审日期" datetime="2017-05-02T00:00:00.000Z" data-article-date-source="ms.date">2017/05/02</time>
+							</li>
+								<li class="contributors-holder">
+									<ul class="facepile has-margin-left-none is-small" data-bi-name="contributors">
+														<li class="facepile-item">
+															<a href="https://github.com/EliotSeattle" title="EliotSeattle" aria-label="EliotSeattleGithub 个人资料" data-src="https://github.com/EliotSeattle.png?size=32" data-contributor-name="EliotSeattle" class="facepile-item-coin">
+																<img class="facepile-item-coin-image durable-image" aria-hidden="true" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/EliotSeattle.png" role="presentation" onerror="this.className=&#39;facepile-item-coin-image durable-image has-error&#39;;">
+																<span class="facepile-item-coin-text durable-image-fallback facepile-item-teal" aria-hidden="true">E</span>
+															</a>
+														</li>
+														<li class="facepile-item">
+															<a href="https://github.com/olprod" title="olprod" aria-label="olprodGithub 个人资料" data-src="https://github.com/olprod.png?size=32" data-contributor-name="olprod" class="facepile-item-coin">
+																<img class="facepile-item-coin-image durable-image" aria-hidden="true" src="./Oscdimg Command-Line 选项 _ Microsoft Docs_files/olprod.png" role="presentation" onerror="this.className=&#39;facepile-item-coin-image durable-image has-error&#39;;">
+																<span class="facepile-item-coin-text durable-image-fallback facepile-item-red" aria-hidden="true">o</span>
+															</a>
+														</li>
+									</ul>
+								</li>
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="文章大纲">
+							<h3>本文内容</h3>
+						<ol><li><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanoscdimg-command-line-options">Oscdimg Command-Line 选项</a></li><li><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idexamplesspanspan-idexamplesspanexamples">示例</a></li><li><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idrelated_topicsspanrelated-topics">相关主题</a></li></ol></nav>
+
+						<!-- <content> -->
+							<p><span data-ttu-id="929c9-104">Oscdimg 是一个命令行工具，可用于创建 Windows 预安装环境 (Windows PE) 的自定义32位或64位版本的映像 ( .iso) 文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-104">Oscdimg is a command-line tool that you can use to create an image (.iso) file of a customized 32-bit or 64-bit version of Windows Preinstallation Environment (Windows PE).</span></span> <span data-ttu-id="929c9-105">然后，可以将 .iso 文件刻录到 CD 或 DVD。</span><span class="sxs-lookup"><span data-stu-id="929c9-105">You can then burn the .iso file to a CD or DVD.</span></span> <span data-ttu-id="929c9-106">Oscdimg 支持 (UDF) 文件系统的 ISO 9660、Joliet 和通用磁盘格式。</span><span class="sxs-lookup"><span data-stu-id="929c9-106">Oscdimg supports ISO 9660, Joliet, and Universal Disk Format (UDF) file systems.</span></span></p>
+<p><span data-ttu-id="929c9-107">本主题内容：</span><span class="sxs-lookup"><span data-stu-id="929c9-107">In this topic:</span></span></p>
+<ul>
+<li><p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#file" data-linktype="self-bookmark"><span data-ttu-id="929c9-108">文件系统选项</span><span class="sxs-lookup"><span data-stu-id="929c9-108">File System Options</span></span></a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#bootoptions" data-linktype="self-bookmark"><span data-ttu-id="929c9-109">CD 或 DVD 启动选项</span><span class="sxs-lookup"><span data-stu-id="929c9-109">CD or DVD Boot Options</span></span></a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#optim" data-linktype="self-bookmark"><span data-ttu-id="929c9-110">优化选项</span><span class="sxs-lookup"><span data-stu-id="929c9-110">Optimization Options</span></span></a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#order" data-linktype="self-bookmark"><span data-ttu-id="929c9-111">排序选项</span><span class="sxs-lookup"><span data-stu-id="929c9-111">Order Options</span></span></a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#video" data-linktype="self-bookmark"><span data-ttu-id="929c9-112">DVD 视频和音频选项</span><span class="sxs-lookup"><span data-stu-id="929c9-112">DVD Video and Audio Options</span></span></a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#mess" data-linktype="self-bookmark"><span data-ttu-id="929c9-113">消息传送选项</span><span class="sxs-lookup"><span data-stu-id="929c9-113">Messaging Options</span></span></a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#general" data-linktype="self-bookmark"><span data-ttu-id="929c9-114">一般映像创建选项</span><span class="sxs-lookup"><span data-stu-id="929c9-114">General Image Creation Options</span></span></a></p>
+</li>
+<li><p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#examples" data-linktype="self-bookmark"><span data-ttu-id="929c9-115">示例</span><span class="sxs-lookup"><span data-stu-id="929c9-115">Examples</span></span></a></p>
+</li>
+</ul>
+<h2 id="span-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanoscdimg-command-line-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanoscdimg-command-line-options" aria-labelledby="span-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanoscdimg-command-line-options"></a><span data-ttu-id="929c9-116"><span id="Oscdimg_Command-Line_Options"></span><span id="oscdimg_command-line_options"></span><span id="OSCDIMG_COMMAND-LINE_OPTIONS"></span>Oscdimg Command-Line 选项</span><span class="sxs-lookup"><span data-stu-id="929c9-116"><span id="Oscdimg_Command-Line_Options"></span><span id="oscdimg_command-line_options"></span><span id="OSCDIMG_COMMAND-LINE_OPTIONS"></span>Oscdimg Command-Line Options</span></span></h2>
+<p><span data-ttu-id="929c9-117">以下命令行选项可用于 Oscdimg。</span><span class="sxs-lookup"><span data-stu-id="929c9-117">The following command-line options are available for Oscdimg.</span></span></p>
+<p><span data-ttu-id="929c9-118"><strong>Oscdimg</strong> [<em>&lt; options &gt;</em> ] <em>&lt; sourceLocation &gt;</em> <em>&lt; destinationFile &gt;</em></span><span class="sxs-lookup"><span data-stu-id="929c9-118"><strong>Oscdimg</strong> [<em>&lt;options&gt;</em>] <em>&lt;sourceLocation&gt;</em> <em>&lt;destinationFile&gt;</em></span></span></p>
+<h3 id="span-idfilespanspan-idfilespanfile-system-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idfilespanspan-idfilespanfile-system-options" aria-labelledby="span-idfilespanspan-idfilespanfile-system-options"></a><span data-ttu-id="929c9-119"><span id="file"></span><span id="FILE"></span>文件系统选项</span><span class="sxs-lookup"><span data-stu-id="929c9-119"><span id="file"></span><span id="FILE"></span>File System Options</span></span></h3>
+<p><span data-ttu-id="929c9-120">Oscdimg 工具和 Microsoft Windows image 主控 API (IMAPI.EXE) 支持三种文件系统格式： ISO 9660、Joliet 和 UDF。</span><span class="sxs-lookup"><span data-stu-id="929c9-120">The Oscdimg tool and Microsoft Windows image mastering API (IMAPI) support three file system formats: ISO 9660, Joliet, and UDF.</span></span></p>
+<h3 id="span-idisospanspan-idisospaniso-9660-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idisospanspan-idisospaniso-9660-options" aria-labelledby="span-idisospanspan-idisospaniso-9660-options"></a><span data-ttu-id="929c9-121"><span id="iso"></span><span id="ISO"></span>ISO 9660 选项</span><span class="sxs-lookup"><span data-stu-id="929c9-121"><span id="iso"></span><span id="ISO"></span>ISO 9660 Options</span></span></h3>
+<p><span data-ttu-id="929c9-122">ISO 9660 选项不能与 Joliet 或 UDF 选项结合。</span><span class="sxs-lookup"><span data-stu-id="929c9-122">ISO 9660 options cannot be combined with Joliet or UDF options.</span></span> <span data-ttu-id="929c9-123">ISO 9660 文件系统中与文件扩展名的长度相结合的文件名长度不能超过30个字符。</span><span class="sxs-lookup"><span data-stu-id="929c9-123">The length of the file name combined with the length of the file name extension cannot exceed 30 characters in the ISO 9660 file system.</span></span></p>
+<p><span data-ttu-id="929c9-124"><strong>-D</strong> 和 <strong>-nt</strong> 选项不能一起使用。</span><span class="sxs-lookup"><span data-stu-id="929c9-124">The <strong>-d</strong> and <strong>-nt</strong> options cannot be used together.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">ISO 9660 选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-125">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-125">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-126">描述</span><span class="sxs-lookup"><span data-stu-id="929c9-126">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-127"><strong>-d</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-127"><strong>-d</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-128">允许用小写的文件名。</span><span class="sxs-lookup"><span data-stu-id="929c9-128">Permits lower case file names.</span></span> <span data-ttu-id="929c9-129">不会将小写的文件名强制为大写。</span><span class="sxs-lookup"><span data-stu-id="929c9-129">Does not force lowercase file names to upper case.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-130">-n</span><span class="sxs-lookup"><span data-stu-id="929c9-130"><strong>-n</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-131">允许文件名超过 DOS 8.3 文件名。</span><span class="sxs-lookup"><span data-stu-id="929c9-131">Permits file names longer than DOS 8.3 file names.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-132"><strong>-nt</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-132"><strong>-nt</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-133">允许与 Windows NT 3.51 兼容的长文件名。</span><span class="sxs-lookup"><span data-stu-id="929c9-133">Permits long file names that are compatible with Windows NT 3.51.</span></span></p></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="span-idjolietspanspan-idjolietspanjoliet-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idjolietspanspan-idjolietspanjoliet-options" aria-labelledby="span-idjolietspanspan-idjolietspanjoliet-options"></a><span data-ttu-id="929c9-134"><span id="joliet"></span><span id="JOLIET"></span>Joliet 选项</span><span class="sxs-lookup"><span data-stu-id="929c9-134"><span id="joliet"></span><span id="JOLIET"></span>Joliet Options</span></span></h3>
+<p><span data-ttu-id="929c9-135">Joliet 是 ISO 9660 文件系统的扩展。</span><span class="sxs-lookup"><span data-stu-id="929c9-135">Joliet is an extension of the ISO 9660 file system.</span></span> <span data-ttu-id="929c9-136">Joliet 允许较长的文件名、Unicode 字符和目录深度大于8。</span><span class="sxs-lookup"><span data-stu-id="929c9-136">Joliet allows longer file names, Unicode characters, and directory depths larger than eight.</span></span> <span data-ttu-id="929c9-137">Joliet 选项不能与 ISO 9660 选项组合。</span><span class="sxs-lookup"><span data-stu-id="929c9-137">Joliet options cannot be combined with ISO 9660 options.</span></span></p>
+<p><span data-ttu-id="929c9-138"><strong>-J2</strong> Joliet 选项不能与任何 UDF 选项一起使用。</span><span class="sxs-lookup"><span data-stu-id="929c9-138">The <strong>-j2</strong> Joliet option cannot be used with any UDF options.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">Joliet 选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-139">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-139">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-140">描述</span><span class="sxs-lookup"><span data-stu-id="929c9-140">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-141"><strong>-j1</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-141"><strong>-j1</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-142">允许两个文件系统查看磁盘上的所有数据。</span><span class="sxs-lookup"><span data-stu-id="929c9-142">Permits both file systems to view all the data on the disk.</span></span> <span data-ttu-id="929c9-143">使用此选项不会复制映像上的所有文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-143">Using this option does not duplicate all files on the image.</span></span> <span data-ttu-id="929c9-144">此选项对 Joliet Unicode 文件名进行编码，并在 ISO 9660 命名空间中生成与 DOS 兼容的8.3 文件名。</span><span class="sxs-lookup"><span data-stu-id="929c9-144">This option encodes Joliet Unicode file names and generates DOS-compatible 8.3 file names in the ISO 9660 namespace.</span></span> <span data-ttu-id="929c9-145">这些文件名可以通过 Joliet 系统或传统 ISO 9660 系统读取。</span><span class="sxs-lookup"><span data-stu-id="929c9-145">These file names can be read by either Joliet systems or conventional ISO 9660 systems.</span></span> <span data-ttu-id="929c9-146">但是，Oscdimg 可能会更改 ISO 9660 命名空间中的某些文件名，以符合 DOS 8.3 和 ISO 9660 命名限制。</span><span class="sxs-lookup"><span data-stu-id="929c9-146">However, Oscdimg may change some of the file names in the ISO 9660 namespace to comply with DOS 8.3 and ISO 9660 naming restrictions.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-147"><strong>-j2</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-147"><strong>-j2</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-148">对不带标准 ISO 9660 名称的 Joliet Unicode 文件名进行编码。</span><span class="sxs-lookup"><span data-stu-id="929c9-148">Encodes Joliet Unicode file names without standard ISO 9660 names.</span></span> <span data-ttu-id="929c9-149">此选项用于生成仅包含 Joliet 文件系统的映像。</span><span class="sxs-lookup"><span data-stu-id="929c9-149">This option is used to produce an image that contains only the Joliet file system.</span></span>  <span data-ttu-id="929c9-150">无法读取 Joliet 的任何系统只会看到一个默认文本文件，该文件会提醒用户此映像仅在支持 Joliet 的计算机上可用。</span><span class="sxs-lookup"><span data-stu-id="929c9-150">Any system that cannot read Joliet sees only a default text file that alerts the user that this image is only available on computers that support Joliet.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-151"><strong>-js</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-151"><strong>-js</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-152">重写用户指定 <strong>-j2</strong> 选项时使用的默认文本文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-152">Overrides the default text file that is used when the user specifies the <strong>-j2</strong> option.</span></span> <span data-ttu-id="929c9-153">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-153">For example:</span></span></p>
+<div class="codeHeader" id="code-try-0" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre class="syntax has-inner-focus" tabindex="0"><code data-author-content="-jsC:\readme.txt">-jsC:\readme.txt</code></pre></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="span-idudfspanspan-idudfspanudf-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idudfspanspan-idudfspanudf-options" aria-labelledby="span-idudfspanspan-idudfspanudf-options"></a><span data-ttu-id="929c9-154"><span id="udf"></span><span id="UDF"></span>UDF 选项</span><span class="sxs-lookup"><span data-stu-id="929c9-154"><span id="udf"></span><span id="UDF"></span>UDF Options</span></span></h3>
+<p><span data-ttu-id="929c9-155">UDF 选项不能与 ISO 9660 选项组合。</span><span class="sxs-lookup"><span data-stu-id="929c9-155">UDF options cannot be combined with ISO 9660 options.</span></span> <span data-ttu-id="929c9-156"><strong>-Ue</strong>、 <strong>-uf</strong> 和 <strong>-us</strong> 选项仅适用于与 <strong>-u2</strong> 选项一起使用时的选项。</span><span class="sxs-lookup"><span data-stu-id="929c9-156">The <strong>-ue</strong>, <strong>-uf</strong>, and <strong>-us</strong> options only apply when they are used together with the <strong>-u2</strong> option.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">UDF 选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-157">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-157">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-158">描述</span><span class="sxs-lookup"><span data-stu-id="929c9-158">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-159"><strong>-u1</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-159"><strong>-u1</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-160">生成同时具有 UDF 文件系统和 ISO 9660 文件系统的映像。</span><span class="sxs-lookup"><span data-stu-id="929c9-160">Produces an image that has both the UDF file system and the ISO 9660 file system.</span></span> <span data-ttu-id="929c9-161">ISO 9660 文件系统是使用与 DOS 兼容的8.3 文件名编写的。</span><span class="sxs-lookup"><span data-stu-id="929c9-161">The ISO 9660 file system is written by using DOS-compatible 8.3 file names.</span></span> <span data-ttu-id="929c9-162">使用 Unicode 文件名编写 UDF 文件系统。</span><span class="sxs-lookup"><span data-stu-id="929c9-162">The UDF file system is written by using Unicode file names.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-163"><strong>-u2</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-163"><strong>-u2</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-164">生成只包含 UDF 文件系统的映像。</span><span class="sxs-lookup"><span data-stu-id="929c9-164">Produces an image that contains only the UDF file system.</span></span> <span data-ttu-id="929c9-165">任何无法读取 UDF 的系统只会看到一个默认文本文件，该文件会提醒用户此映像仅在支持 UDF 的计算机上可用。</span><span class="sxs-lookup"><span data-stu-id="929c9-165">Any system that cannot read UDF sees only a default text file that alerts the user that this image is only available on computers that support UDF.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-166"><strong>-udfver102</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-166"><strong>-udfver102</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-167">指定 UDF 文件系统版本1.02。</span><span class="sxs-lookup"><span data-stu-id="929c9-167">Specifies UDF file system version 1.02.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-168"><strong>-ue</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-168"><strong>-ue</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-169">创建嵌入文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-169">Creates embedded files.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-170"><strong>-uf</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-170"><strong>-uf</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-171">嵌入 UDF 文件标识符条目。</span><span class="sxs-lookup"><span data-stu-id="929c9-171">Embeds UDF file identifier entries.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-172"><strong>-你的</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-172"><strong>-ur</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-173">替代与 <strong>-u2</strong> 选项一起使用的默认文本文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-173">Overrides the default text file that is used together with the <strong>-u2</strong> option.</span></span> <span data-ttu-id="929c9-174">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-174">For example:</span></span></p>
+<div class="codeHeader" id="code-try-1" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre class="syntax has-inner-focus" tabindex="0"><code data-author-content="-urC:\Readme.txt">-urC:\Readme.txt</code></pre></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-175"><strong>-us</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-175"><strong>-us</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-176">创建稀疏文件（如果可用）以提高磁盘空间的使用效率。</span><span class="sxs-lookup"><span data-stu-id="929c9-176">Creates sparse files, when available, to make disk space usage more efficient.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-177"><strong>-yl</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-177"><strong>-yl</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-178">指定较长的分配描述符，而不是短的分配描述符。</span><span class="sxs-lookup"><span data-stu-id="929c9-178">Specifies long allocation descriptors instead of short allocation descriptors.</span></span></p></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="span-idbootoptionsspanspan-idbootoptionsspanspan-idbootoptionsspancd-or-dvd-boot-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idbootoptionsspanspan-idbootoptionsspanspan-idbootoptionsspancd-or-dvd-boot-options" aria-labelledby="span-idbootoptionsspanspan-idbootoptionsspanspan-idbootoptionsspancd-or-dvd-boot-options"></a><span data-ttu-id="929c9-179"><span id="bootOptions"></span><span id="bootoptions"></span><span id="BOOTOPTIONS"></span>CD 或 DVD 启动选项</span><span class="sxs-lookup"><span data-stu-id="929c9-179"><span id="bootOptions"></span><span id="bootoptions"></span><span id="BOOTOPTIONS"></span>CD or DVD Boot Options</span></span></h3>
+<p><span data-ttu-id="929c9-180">启动选项可用于创建可启动 CD 或 DVD 映像。</span><span class="sxs-lookup"><span data-stu-id="929c9-180">Boot options can be used to create bootable CD or DVD images.</span></span> <span data-ttu-id="929c9-181">以下启动选项可用于生成单启动条目。</span><span class="sxs-lookup"><span data-stu-id="929c9-181">The following boot options can be used to generate single-boot entries.</span></span> <span data-ttu-id="929c9-182">有关详细信息，请参阅 <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#example_singleboot" data-linktype="self-bookmark">使用单个启动项来创建可启动映像</a>。</span><span class="sxs-lookup"><span data-stu-id="929c9-182">For more information, see <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#example_singleboot" data-linktype="self-bookmark">Use a single boot entry to create a bootable image</a>.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">CD 或 DVD 启动选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-183">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-183">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-184">描述</span><span class="sxs-lookup"><span data-stu-id="929c9-184">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-185"><strong>-b</strong><em> &lt; bootSectorFile &gt; </em></span><span class="sxs-lookup"><span data-stu-id="929c9-185"><strong>-b</strong><em>&lt;bootSectorFile&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-186">指定将写入到磁盘的启动扇区或扇区中的 El Torito boot 扇区文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-186">Specifies the El Torito boot sector file that will be written in the boot sector or sectors of the disk.</span></span> <span data-ttu-id="929c9-187">请不要使用空格。</span><span class="sxs-lookup"><span data-stu-id="929c9-187">Do not use spaces.</span></span> <span data-ttu-id="929c9-188">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-188">For example:</span></span></p>
+<p><span data-ttu-id="929c9-189">在 UEFI 上： <code>-bC:\winpe_x86\Efisys.bin</code></span><span class="sxs-lookup"><span data-stu-id="929c9-189">On UEFI: <code>-bC:\winpe_x86\Efisys.bin</code></span></span></p>
+<p><span data-ttu-id="929c9-190">在 BIOS 上： <code>-bC:\winpe_x86\Etfsboot.com</code></span><span class="sxs-lookup"><span data-stu-id="929c9-190">On BIOS: <code>-bC:\winpe_x86\Etfsboot.com</code></span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-191"><strong>-e</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-191"><strong>-e</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-192">禁用 El Torito 目录中的软盘仿真。</span><span class="sxs-lookup"><span data-stu-id="929c9-192">Disables floppy disk emulation in the El Torito catalog.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-193"><strong>-p</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-193"><strong>-p</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-194">指定要用于 El Torito 目录中的平台 ID 的值。</span><span class="sxs-lookup"><span data-stu-id="929c9-194">Specifies the value to use for the platform ID in the El Torito catalog.</span></span> <span data-ttu-id="929c9-195">默认 ID 为0xEF，用于表示 (UEFI) 系统的统一可扩展固件接口。</span><span class="sxs-lookup"><span data-stu-id="929c9-195">The default ID is 0xEF to represent a Unified Extensible Firmware Interface (UEFI) system.</span></span> <span data-ttu-id="929c9-196">0x00 表示 BIOS 系统。</span><span class="sxs-lookup"><span data-stu-id="929c9-196">0x00 represents a BIOS system.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-197"><em>&lt;sourceLocation&gt;</em></span><span class="sxs-lookup"><span data-stu-id="929c9-197"><em>&lt;sourceLocation&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-198">必需。</span><span class="sxs-lookup"><span data-stu-id="929c9-198">Required.</span></span> <span data-ttu-id="929c9-199">指定您要创建到 .iso 映像中的文件的位置。</span><span class="sxs-lookup"><span data-stu-id="929c9-199">Specifies the location of the files that you intend to build into an .iso image.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-200"><em>&lt;targetFile&gt;</em></span><span class="sxs-lookup"><span data-stu-id="929c9-200"><em>&lt;targetFile&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-201">指定 .iso 映像文件的名称。</span><span class="sxs-lookup"><span data-stu-id="929c9-201">Specifies the name of the .iso image file.</span></span></p></td>
+</tr>
+</tbody>
+</table></div>
+<p><span data-ttu-id="929c9-202"><strong>重要说明</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-202"><strong>Important</strong></span></span><br>
+<span data-ttu-id="929c9-203">不能在同一命令中组合单启动条目和多启动条目。</span><span class="sxs-lookup"><span data-stu-id="929c9-203">Single-boot entries and multi-boot entries cannot be combined in the same command.</span></span></p>
+<p><span data-ttu-id="929c9-204">以下启动选项可用于生成多启动项。</span><span class="sxs-lookup"><span data-stu-id="929c9-204">The following boot options can be used to generate multi-boot entries.</span></span> <span data-ttu-id="929c9-205">有关详细信息，请参阅 <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#examples_multi-boot" data-linktype="self-bookmark">使用多启动条目创建映像文件</a>。</span><span class="sxs-lookup"><span data-stu-id="929c9-205">For more information, see <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#examples_multi-boot" data-linktype="self-bookmark">Use multi-boot entries to create an image file</a>.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">CD 或 DVD 启动选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-206">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-206">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-207">描述</span><span class="sxs-lookup"><span data-stu-id="929c9-207">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-208"><strong>b</strong><em> &lt; bootSectorFile &gt; </em></span><span class="sxs-lookup"><span data-stu-id="929c9-208"><strong>b</strong><em>&lt;bootSectorFile&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-209">指定将写入到磁盘的启动扇区或扇区中的 El Torito boot 扇区文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-209">Specifies the El Torito boot sector file that will be written in the boot sector or sectors of the disk.</span></span> <span data-ttu-id="929c9-210">请不要使用空格。</span><span class="sxs-lookup"><span data-stu-id="929c9-210">Do not use spaces.</span></span> <span data-ttu-id="929c9-211">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-211">For example:</span></span></p>
+<p><span data-ttu-id="929c9-212">在 UEFI 上： <code>bEfisys.bin</code></span><span class="sxs-lookup"><span data-stu-id="929c9-212">On UEFI: <code>bEfisys.bin</code></span></span></p>
+<p><span data-ttu-id="929c9-213">在 BIOS 上： <code>bEtfsboot.com</code></span><span class="sxs-lookup"><span data-stu-id="929c9-213">On BIOS: <code>bEtfsboot.com</code></span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-214"><strong>-bootdata：</strong><em> &lt; number &gt; </em></span><span class="sxs-lookup"><span data-stu-id="929c9-214"><strong>-bootdata:</strong><em>&lt;number&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-215">指定多启动映像，后跟启动条目数。</span><span class="sxs-lookup"><span data-stu-id="929c9-215">Specifies a multi-boot image, followed by the number of boot entries.</span></span> <span data-ttu-id="929c9-216">请不要使用空格。</span><span class="sxs-lookup"><span data-stu-id="929c9-216">Do not use spaces.</span></span> <span data-ttu-id="929c9-217">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-217">For example:</span></span></p>
+<div class="codeHeader" id="code-try-2" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre class="syntax has-inner-focus" tabindex="0"><code data-author-content="-bootdata:&lt;3&gt;#&lt;defaultBootEntry&gt;#&lt;bootEntry1&gt;#&lt;bootEntryN&gt;">-bootdata:&lt;3&gt;#&lt;defaultBootEntry&gt;#&lt;bootEntry1&gt;#&lt;bootEntryN&gt;</code></pre>
+<p><span data-ttu-id="929c9-218">其中， <em> &lt; 3 &gt; </em>是后面的启动条目数。</span><span class="sxs-lookup"><span data-stu-id="929c9-218">where <em>&lt;3&gt;</em> is the number of boot entries that follow.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-219"><strong>e</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-219"><strong>e</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-220">禁用 El Torito 目录中的软盘仿真。</span><span class="sxs-lookup"><span data-stu-id="929c9-220">Disables floppy disk emulation in the El Torito catalog.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-221"><strong>h-p</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-221"><strong>p</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-222">指定要用于 El Torito 目录中的平台 ID 的值。</span><span class="sxs-lookup"><span data-stu-id="929c9-222">Specifies the value to use for the platform ID in the El Torito catalog.</span></span> <span data-ttu-id="929c9-223">默认 ID 为0xEF，表示 UEFI 系统。</span><span class="sxs-lookup"><span data-stu-id="929c9-223">The default ID is 0xEF to represent a UEFI system.</span></span> <span data-ttu-id="929c9-224">0x00 表示 BIOS 系统。</span><span class="sxs-lookup"><span data-stu-id="929c9-224">0x00 represents a BIOS system.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-225"><strong>t</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-225"><strong>t</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-226">指定 El Torito 负载段。</span><span class="sxs-lookup"><span data-stu-id="929c9-226">Specifies the El Torito load segment.</span></span> <span data-ttu-id="929c9-227">如果未指定此选项，则此选项默认为0x7C0。</span><span class="sxs-lookup"><span data-stu-id="929c9-227">If not specified, this option defaults to 0x7C0.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-228"><em>&lt;sourceLocation&gt;</em></span><span class="sxs-lookup"><span data-stu-id="929c9-228"><em>&lt;sourceLocation&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-229">必需。</span><span class="sxs-lookup"><span data-stu-id="929c9-229">Required.</span></span> <span data-ttu-id="929c9-230">指定您要创建到 .iso 映像中的文件的位置。</span><span class="sxs-lookup"><span data-stu-id="929c9-230">Specifies the location of the files that you intend to build into an .iso image.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-231"><em>&lt;targetFile&gt;</em></span><span class="sxs-lookup"><span data-stu-id="929c9-231"><em>&lt;targetFile&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-232">指定 .iso 映像文件的名称。</span><span class="sxs-lookup"><span data-stu-id="929c9-232">Specifies the name of the .iso image file.</span></span></p></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="span-idoptimspanspan-idoptimspanoptimization-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idoptimspanspan-idoptimspanoptimization-options" aria-labelledby="span-idoptimspanspan-idoptimspanoptimization-options"></a><span data-ttu-id="929c9-233"><span id="optim"></span><span id="OPTIM"></span>优化选项</span><span class="sxs-lookup"><span data-stu-id="929c9-233"><span id="optim"></span><span id="OPTIM"></span>Optimization Options</span></span></h3>
+<p><span data-ttu-id="929c9-234">优化选项可用于通过仅对重复的文件进行一次编码来优化存储。</span><span class="sxs-lookup"><span data-stu-id="929c9-234">Optimization options can be used to optimize storage by encoding duplicate files only once.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">优化选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-235">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-235">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-236">描述</span><span class="sxs-lookup"><span data-stu-id="929c9-236">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-237"><strong>-o</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-237"><strong>-o</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-238">使用 MD5 哈希算法来比较文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-238">Uses a MD5 hashing algorithm to compare files.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-239"><strong>-oc</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-239"><strong>-oc</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-240">对每个文件使用二进制比较，并且速度慢于 <strong>-o</strong> 选项。</span><span class="sxs-lookup"><span data-stu-id="929c9-240">Uses a binary comparison of each file, and is slower than the <strong>-o</strong> option.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-241"><strong>-oi</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-241"><strong>-oi</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-242">比较文件时忽略菱形压缩时间戳。</span><span class="sxs-lookup"><span data-stu-id="929c9-242">Ignores Diamond compression timestamps when comparing files.</span></span></p></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="span-idorderspanspan-idorderspanorder-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idorderspanspan-idorderspanorder-options" aria-labelledby="span-idorderspanspan-idorderspanorder-options"></a><span data-ttu-id="929c9-243"><span id="order"></span><span id="ORDER"></span>排序选项</span><span class="sxs-lookup"><span data-stu-id="929c9-243"><span id="order"></span><span id="ORDER"></span>Order Options</span></span></h3>
+<p><span data-ttu-id="929c9-244">Order 选项指定文件在磁盘上的顺序。</span><span class="sxs-lookup"><span data-stu-id="929c9-244">Order options specify the file order on disk.</span></span> <span data-ttu-id="929c9-245">文件顺序不必列出所有文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-245">The file order does not have to list all files.</span></span> <span data-ttu-id="929c9-246">此文件中未显示的任何文件都将按通常 (的顺序进行排序（如果排序文件在) 不存在）。</span><span class="sxs-lookup"><span data-stu-id="929c9-246">Any files that do not appear in this file are ordered as they would be ordinarily (that is, if the ordering file did not exist).</span></span> <span data-ttu-id="929c9-247">有关详细信息，请参阅 <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#example_bootorder" data-linktype="self-bookmark">指定启动顺序</a>。</span><span class="sxs-lookup"><span data-stu-id="929c9-247">For more information, see <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#example_bootorder" data-linktype="self-bookmark">Specify the boot order</a>.</span></span></p>
+<p><span data-ttu-id="929c9-248"><strong>-Yo</strong> 选项优先于 <strong>-y5</strong> 选项。</span><span class="sxs-lookup"><span data-stu-id="929c9-248">The <strong>-yo</strong> option takes precedence over the <strong>-y5</strong> option.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">排序选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-249">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-249">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-250">描述</span><span class="sxs-lookup"><span data-stu-id="929c9-250">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-251"><strong>-y5</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-251"><strong>-y5</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-252">指定磁盘上的文件布局。</span><span class="sxs-lookup"><span data-stu-id="929c9-252">Specifies file layout on disk.</span></span> <span data-ttu-id="929c9-253">此选项先以反向排序顺序写入 i386 目录中的所有文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-253">This option writes all files in an i386 directory first and in reverse sort order.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-254"><strong>-yo</strong> &lt;bootOrder.txt&gt;</span><span class="sxs-lookup"><span data-stu-id="929c9-254"><strong>-yo</strong>&lt;bootOrder.txt&gt;</span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-255">指定一个文本文件，该文件具有要放入图像中的文件的布局。</span><span class="sxs-lookup"><span data-stu-id="929c9-255">Specifies a text file that has a layout for the files to be put in the image.</span></span> <span data-ttu-id="929c9-256">请不要使用空格。</span><span class="sxs-lookup"><span data-stu-id="929c9-256">Do not use spaces.</span></span> <span data-ttu-id="929c9-257">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-257">For example:</span></span></p>
+<div class="codeHeader" id="code-try-3" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre class="syntax has-inner-focus" tabindex="0"><code data-author-content="-yoC:\temp\bootOrder.txt">-yoC:\temp\bootOrder.txt</code></pre></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="span-idvideospanspan-idvideospandvd-video-and-audio-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idvideospanspan-idvideospandvd-video-and-audio-options" aria-labelledby="span-idvideospanspan-idvideospandvd-video-and-audio-options"></a><span data-ttu-id="929c9-258"><span id="video"></span><span id="VIDEO"></span>DVD 视频和音频选项</span><span class="sxs-lookup"><span data-stu-id="929c9-258"><span id="video"></span><span id="VIDEO"></span>DVD Video and Audio Options</span></span></h3>
+<p><span data-ttu-id="929c9-259">DVD 视频和音频磁盘创建选项不能与 ISO 9660、Joliet 或 UDF 选项组合。</span><span class="sxs-lookup"><span data-stu-id="929c9-259">The DVD video and audio disk creation options cannot be combined with ISO 9660, Joliet, or UDF options.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">DVD 视频和音频选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-260">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-260">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-261">描述</span><span class="sxs-lookup"><span data-stu-id="929c9-261">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-262"><strong>-未</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-262"><strong>-ut</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-263">在 DVD 视频和音频磁盘创建过程中截断映像的 ISO 9660 部分。</span><span class="sxs-lookup"><span data-stu-id="929c9-263">Truncates the ISO 9660 section of the image during DVD video and audio disk creation.</span></span> <span data-ttu-id="929c9-264">使用此选项时，ISO 9660 文件系统仅显示 VIDEO_TS、AUDIO_TS 和 JACKET_P 目录。</span><span class="sxs-lookup"><span data-stu-id="929c9-264">When this option is used, only the VIDEO_TS, AUDIO_TS, and JACKET_P directories are visible from the ISO 9660 file system.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-265"><strong>-uv</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-265"><strong>-uv</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-266">指定在 DVD 视频和音频磁盘创建过程中 UDF 视频区域兼容性。</span><span class="sxs-lookup"><span data-stu-id="929c9-266">Specifies UDF Video Zone compatibility during DVD video and audio disk creation.</span></span> <span data-ttu-id="929c9-267">在创建过程中，UDF 1.02 和 ISO 9660 会写入磁盘。</span><span class="sxs-lookup"><span data-stu-id="929c9-267">During creation, UDF 1.02 and ISO 9660 are written to the disk.</span></span> <span data-ttu-id="929c9-268">首先写入 VIDEO_TS、AUDIO_TS 和 JACKET_P 目录中的所有文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-268">All files in the VIDEO_TS, AUDIO_TS, and JACKET_P directories are written first.</span></span> <span data-ttu-id="929c9-269">这些目录优先于此映像使用的所有其他排序规则。</span><span class="sxs-lookup"><span data-stu-id="929c9-269">These directories take precedence over all other ordering rules that are used for this image.</span></span></p></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="span-idmessspanspan-idmessspanmessaging-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idmessspanspan-idmessspanmessaging-options" aria-labelledby="span-idmessspanspan-idmessspanmessaging-options"></a><span data-ttu-id="929c9-270"><span id="mess"></span><span id="MESS"></span>消息传送选项</span><span class="sxs-lookup"><span data-stu-id="929c9-270"><span id="mess"></span><span id="MESS"></span>Messaging Options</span></span></h3>
+<p><span data-ttu-id="929c9-271">消息传送选项用于自定义文件和目录信息的显示方式。</span><span class="sxs-lookup"><span data-stu-id="929c9-271">Messaging options customize how file and directory information appears.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">消息传送选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-272">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-272">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-273">描述</span><span class="sxs-lookup"><span data-stu-id="929c9-273">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-274"><strong>-a</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-274"><strong>-a</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-275">显示文件和目录的分配摘要。</span><span class="sxs-lookup"><span data-stu-id="929c9-275">Displays the allocation summary for files and directories.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-276"><strong>-os</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-276"><strong>-os</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-277">当系统创建映像时显示重复文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-277">Shows duplicate files when the system creates the image.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-278"><strong>-w1</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-278"><strong>-w1</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-279">报告所有不符合 ISO 或 Joliet 的文件名或目录。</span><span class="sxs-lookup"><span data-stu-id="929c9-279">Reports all file names or directories that are not ISO-compliant or Joliet-compliant.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-280"><strong>-w2</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-280"><strong>-w2</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-281">报告不符合 DOS 标准的所有文件名。</span><span class="sxs-lookup"><span data-stu-id="929c9-281">Reports all file names that are not DOS-compliant.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-282"><strong>-w3</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-282"><strong>-w3</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-283">报告所有长度为零的文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-283">Reports all zero-length files.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-284"><strong>-w4</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-284"><strong>-w4</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-285">报告复制到映像的每个文件名。</span><span class="sxs-lookup"><span data-stu-id="929c9-285">Reports each file name that is copied to the image.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-286"><strong>-yd</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-286"><strong>-yd</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-287">对于具有相同的初始64000字节的非相同文件，禁止显示警告。</span><span class="sxs-lookup"><span data-stu-id="929c9-287">Suppresses warnings for non-identical files that have the same initial 64,000 bytes.</span></span></p></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="span-idgeneralspanspan-idgeneralspangeneral-image-creation-options" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idgeneralspanspan-idgeneralspangeneral-image-creation-options" aria-labelledby="span-idgeneralspanspan-idgeneralspangeneral-image-creation-options"></a><span data-ttu-id="929c9-288"><span id="general"></span><span id="GENERAL"></span>一般映像创建选项</span><span class="sxs-lookup"><span data-stu-id="929c9-288"><span id="general"></span><span id="GENERAL"></span>General Image Creation Options</span></span></h3>
+<p><span data-ttu-id="929c9-289">一般映像创建选项可与单一启动条目选项或多启动条目选项一起使用，以创建可启动 CD 或 DVD 映像。</span><span class="sxs-lookup"><span data-stu-id="929c9-289">General image creation options can be used together with a single-boot entry option or multi-boot entry options to create bootable CD or DVD images.</span></span> <span data-ttu-id="929c9-290">有关详细信息，请参阅 <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#bootoptions" data-linktype="self-bookmark">启动选项</a> 和 <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#examples" data-linktype="self-bookmark">示例</a>。</span><span class="sxs-lookup"><span data-stu-id="929c9-290">For more information, see <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#bootoptions" data-linktype="self-bookmark">Boot Options</a> and <a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#examples" data-linktype="self-bookmark">Examples</a>.</span></span></p>
+<p><span data-ttu-id="929c9-291"><strong>-M</strong> 和 <strong>-maxsize</strong> 选项不能一起使用。</span><span class="sxs-lookup"><span data-stu-id="929c9-291">The <strong>-m</strong> and <strong>-maxsize</strong> options cannot be used together.</span></span></p>
+<div class="table-scroll-wrapper"><table class="table"><caption class="visually-hidden">一般映像创建选项</caption>
+<colgroup>
+<col width="50%">
+<col width="50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><span data-ttu-id="929c9-292">选项</span><span class="sxs-lookup"><span data-stu-id="929c9-292">Option</span></span></th>
+<th align="left"><span data-ttu-id="929c9-293">说明</span><span class="sxs-lookup"><span data-stu-id="929c9-293">Description</span></span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-294"><strong>-c</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-294"><strong>-c</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-295">指定系统必须使用 ANSI 文件名，而不是 OEM 文件名。</span><span class="sxs-lookup"><span data-stu-id="929c9-295">Specifies that the system must use ANSI file names instead of OEM file names.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-296"><strong>-g</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-296"><strong>-g</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-297">将时间值编码为所有文件 (UCT) ，而不是本地时间。</span><span class="sxs-lookup"><span data-stu-id="929c9-297">Encodes time values as Universal Coordinated Time (UCT) for all files, instead of the local time.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-298"><strong>-h</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-298"><strong>-h</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-299">在映像的源路径中包括隐藏的文件和目录。</span><span class="sxs-lookup"><span data-stu-id="929c9-299">Includes hidden files and directories in the source path of the image.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-300"><strong>-k</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-300"><strong>-k</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-301">即使无法打开某些源文件，也会创建一个图像。</span><span class="sxs-lookup"><span data-stu-id="929c9-301">Creates an image even if some of the source files cannot be opened.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-302"><strong>-l</strong><em> &lt; volumeLabel &gt; </em></span><span class="sxs-lookup"><span data-stu-id="929c9-302"><strong>-l</strong><em>&lt;volumeLabel&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-303">指定卷标。</span><span class="sxs-lookup"><span data-stu-id="929c9-303">Specifies the volume label.</span></span> <span data-ttu-id="929c9-304">请不要使用空格。</span><span class="sxs-lookup"><span data-stu-id="929c9-304">Do not use spaces.</span></span> <span data-ttu-id="929c9-305">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-305">For example:</span></span></p>
+<div class="codeHeader" id="code-try-4" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre class="syntax has-inner-focus" tabindex="0"><code data-author-content="-l&lt;volumeLabel&gt;">-l&lt;volumeLabel&gt;</code></pre></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-306"><strong>-m</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-306"><strong>-m</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-307">忽略图像的最大大小限制。</span><span class="sxs-lookup"><span data-stu-id="929c9-307">Ignores the maximum size limit of an image.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-308"><strong>-maxsize：</strong><em> &lt; limit &gt; </em></span><span class="sxs-lookup"><span data-stu-id="929c9-308"><strong>-maxsize:</strong><em>&lt;limit&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-309">覆盖图像的默认最大大小。</span><span class="sxs-lookup"><span data-stu-id="929c9-309">Overrides the default maximum size of an image.</span></span> <span data-ttu-id="929c9-310">默认值为74分钟 CD。</span><span class="sxs-lookup"><span data-stu-id="929c9-310">The default value is a 74-minute CD.</span></span> <span data-ttu-id="929c9-311">但是，如果使用 UDF，则默认值没有最大大小。</span><span class="sxs-lookup"><span data-stu-id="929c9-311">However, if UDF is used, the default has no maximum size.</span></span> <span data-ttu-id="929c9-312">请不要使用空格。</span><span class="sxs-lookup"><span data-stu-id="929c9-312">Do not use spaces.</span></span> <span data-ttu-id="929c9-313">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-313">For example:</span></span></p>
+<div class="codeHeader" id="code-try-5" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre class="syntax has-inner-focus" tabindex="0"><code data-author-content="-maxsize:&lt;4096&gt;">-maxsize:&lt;4096&gt;</code></pre>
+<p><span data-ttu-id="929c9-314">其中， <em> &lt; 4096 &gt; </em>将图像限制为 4096 MB。</span><span class="sxs-lookup"><span data-stu-id="929c9-314">where <em>&lt;4096&gt;</em> limits the image to 4096 MB.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-315">-q</span><span class="sxs-lookup"><span data-stu-id="929c9-315"><strong>-q</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-316">仅扫描源文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-316">Scans the source files only.</span></span> <span data-ttu-id="929c9-317">此选项不会创建映像。</span><span class="sxs-lookup"><span data-stu-id="929c9-317">This option does not create an image.</span></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-318"><strong>-r</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-318"><strong>-r</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-319">Windows 8 的新的。</span><span class="sxs-lookup"><span data-stu-id="929c9-319">New for Windows 8.</span></span> <span data-ttu-id="929c9-320">将符号链接解析为其目标位置。</span><span class="sxs-lookup"><span data-stu-id="929c9-320">Resolves symbolic links to their target location.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-321"><strong>-t</strong><em> &lt; mm/dd/yyyy，hh： mm： ss &gt; </em></span><span class="sxs-lookup"><span data-stu-id="929c9-321"><strong>-t</strong><em>&lt;mm/dd/yyyy,hh:mm:ss&gt;</em></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-322">指定所有文件和目录的时间戳。</span><span class="sxs-lookup"><span data-stu-id="929c9-322">Specifies the timestamp for all files and directories.</span></span> <span data-ttu-id="929c9-323">请不要使用空格。</span><span class="sxs-lookup"><span data-stu-id="929c9-323">Do not use spaces.</span></span> <span data-ttu-id="929c9-324">可以在项之间使用任何分隔符。</span><span class="sxs-lookup"><span data-stu-id="929c9-324">You can use any delimiter between the items.</span></span> <span data-ttu-id="929c9-325">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-325">For example:</span></span></p>
+<div class="codeHeader" id="code-try-6" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre class="syntax has-inner-focus" tabindex="0"><code data-author-content="-t12/31/2000,15:01:00">-t12/31/2000,15:01:00</code></pre></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span data-ttu-id="929c9-326"><strong>-y6</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-326"><strong>-y6</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-327">指定目录记录必须在扇区末尾完全对齐。</span><span class="sxs-lookup"><span data-stu-id="929c9-327">Specifies that directory records must be exactly aligned at the end of sectors.</span></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span data-ttu-id="929c9-328"><strong>-yw</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-328"><strong>-yw</strong></span></span></p></td>
+<td align="left"><p><span data-ttu-id="929c9-329">打开具有写入共享的源文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-329">Opens source files that have write sharing.</span></span></p></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="span-idexamplesspanspan-idexamplesspanexamples" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idexamplesspanspan-idexamplesspanexamples" aria-labelledby="span-idexamplesspanspan-idexamplesspanexamples"></a><span data-ttu-id="929c9-330"><span id="examples"></span><span id="EXAMPLES"></span>示例</span><span class="sxs-lookup"><span data-stu-id="929c9-330"><span id="examples"></span><span id="EXAMPLES"></span>Examples</span></span></h2>
+<p><span data-ttu-id="929c9-331">这些示例演示了如何执行以下操作：</span><span class="sxs-lookup"><span data-stu-id="929c9-331">These examples illustrate how to do the following:</span></span></p>
+<ul>
+<li><p><span data-ttu-id="929c9-332">使用单一启动条目为基于 UEFI 的计算机创建可启动 CD 或 DVD。</span><span class="sxs-lookup"><span data-stu-id="929c9-332">Create a bootable CD or DVD for a UEFI-based computer by using a single-boot entry.</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-333">使用多启动条目为基于 UEFI 或 BIOS 的计算机创建可启动 CD 或 DVD。</span><span class="sxs-lookup"><span data-stu-id="929c9-333">Create a bootable CD or DVD for a UEFI-based or BIOS-based computer by using a multi-boot entry.</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-334">指定磁盘上的启动文件顺序。</span><span class="sxs-lookup"><span data-stu-id="929c9-334">Specify the boot file order on a disk.</span></span></p>
+</li>
+</ul>
+<h3 id="span-idexample_singlebootspanspan-idexample_singlebootspanuse-a-single-boot-entry-to-create-a-bootable-image" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idexample_singlebootspanspan-idexample_singlebootspanuse-a-single-boot-entry-to-create-a-bootable-image" aria-labelledby="span-idexample_singlebootspanspan-idexample_singlebootspanuse-a-single-boot-entry-to-create-a-bootable-image"></a><span data-ttu-id="929c9-335"><span id="example_singleboot"></span><span id="EXAMPLE_SINGLEBOOT"></span>使用单启动条目创建可启动映像</span><span class="sxs-lookup"><span data-stu-id="929c9-335"><span id="example_singleboot"></span><span id="EXAMPLE_SINGLEBOOT"></span>Use a single-boot entry to create a bootable image</span></span></h3>
+<p><span data-ttu-id="929c9-336">可以使用 Oscdimg 工具创建可启动 CD 或 DVD，方法是使用单一启动项。</span><span class="sxs-lookup"><span data-stu-id="929c9-336">You can use the Oscdimg tool to create a bootable CD or DVD by using a single-boot entry.</span></span></p>
+<p><span data-ttu-id="929c9-337"><strong>使用单启动条目</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-337"><strong>To use a single-boot entry</strong></span></span></p>
+<ul>
+<li><p><span data-ttu-id="929c9-338">为基于 UEFI 的计算机创建图像文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-338">Create an image file for a UEFI-based computer.</span></span> <span data-ttu-id="929c9-339">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-339">For example:</span></span></p>
+<div class="codeHeader" id="code-try-7" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre tabindex="0" class="has-inner-focus"><code data-author-content="Oscdimg -bC:\winpe_amd64\Efisys.bin -pEF -u1 -udfver102 C:\winpe_amd64\media C:\winpe_amd64\winpeamd64.iso
+">Oscdimg -bC:\winpe_amd64\Efisys.bin -pEF -u1 -udfver102 C:\winpe_amd64\media C:\winpe_amd64\winpeamd64.iso
+</code></pre>
+<p><span data-ttu-id="929c9-340">其中 C： \ winpe _ amd64 \ media 是源文件的位置，而 c： \ winpe _ amd64 \ winpeamd64 是 .iso 文件的路径。</span><span class="sxs-lookup"><span data-stu-id="929c9-340">where C:\winpe_amd64\media is the location of the source files, and C:\winpe_amd64\winpeamd64.iso is the path of the .iso file.</span></span></p>
+</li>
+</ul>
+<h3 id="span-idexamples_multi-bootspanspan-idexamples_multi-bootspanuse-multi-boot-entries-to-create-a-bootable-image" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idexamples_multi-bootspanspan-idexamples_multi-bootspanuse-multi-boot-entries-to-create-a-bootable-image" aria-labelledby="span-idexamples_multi-bootspanspan-idexamples_multi-bootspanuse-multi-boot-entries-to-create-a-bootable-image"></a><span data-ttu-id="929c9-341"><span id="examples_multi-boot"></span><span id="EXAMPLES_MULTI-BOOT"></span>使用多启动条目创建可启动映像</span><span class="sxs-lookup"><span data-stu-id="929c9-341"><span id="examples_multi-boot"></span><span id="EXAMPLES_MULTI-BOOT"></span>Use multi-boot entries to create a bootable image</span></span></h3>
+<p><span data-ttu-id="929c9-342">可以使用 Oscdimg 工具，通过多启动项来创建可启动 CD 或 DVD。</span><span class="sxs-lookup"><span data-stu-id="929c9-342">You can use the Oscdimg tool to create a bootable CD or DVD by using multi-boot entries.</span></span> <span data-ttu-id="929c9-343">执行此操作时，请注意以下事项：</span><span class="sxs-lookup"><span data-stu-id="929c9-343">When you do this, note the following:</span></span></p>
+<ul>
+<li><p><span data-ttu-id="929c9-344"><strong>Bootdata</strong> 选项必须后跟命令 (<strong>-bootdata：</strong><em>&lt; number &gt;</em>) 中的启动条目数。</span><span class="sxs-lookup"><span data-stu-id="929c9-344">The <strong>bootdata</strong> option must be followed by the number of boot entries in the command (<strong>-bootdata:</strong><em>&lt;number&gt;</em>).</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-345">必须使用 () 的哈希符号分隔每个多启动项 # 。</span><span class="sxs-lookup"><span data-stu-id="929c9-345">Each multi-boot entry must be delimited by using a hash symbol (#).</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-346">启动项的每个选项必须用逗号分隔 (，) 。</span><span class="sxs-lookup"><span data-stu-id="929c9-346">Each option for a boot entry must be delimited by using a comma (,).</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-347">每个启动条目都必须指定平台 ID。</span><span class="sxs-lookup"><span data-stu-id="929c9-347">Each boot entry must specify the platform ID.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="929c9-348"><strong>使用多启动条目</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-348"><strong>To use multi-boot entries</strong></span></span></p>
+<ul>
+<li><p><span data-ttu-id="929c9-349">使用多启动命令为基于 UEFI 或 BIOS 的计算机创建图像文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-349">Create an image file for either a UEFI-based or BIOS-based computer by using a multi-boot command.</span></span> <span data-ttu-id="929c9-350">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-350">For example:</span></span></p>
+<div class="codeHeader" id="code-try-8" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre tabindex="0" class="has-inner-focus"><code data-author-content="Oscdimg -bootdata:2#p0,e,bEtfsboot.com#pEF,e,bEfisys.bin -u1 
+-udfver102 C:\winpe_amd64\media C:\winpe_amd64\winpeamd64.iso
+">Oscdimg -bootdata:2#p0,e,bEtfsboot.com#pEF,e,bEfisys.bin -u1 
+-udfver102 C:\winpe_amd64\media C:\winpe_amd64\winpeamd64.iso
+</code></pre>
+<p><span data-ttu-id="929c9-351">其中，此命令启动 BIOS 映像的 Etfsboot.com boot 文件，然后启动 UEFI 映像的 Efisys boot 文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-351">where this command starts the Etfsboot.com boot file for a BIOS image, and then starts the Efisys.bin boot file for a UEFI image.</span></span></p>
+</li>
+</ul>
+<h3 id="span-idexample_bootorderspanspan-idexample_bootorderspanspecify-the-boot-order" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idexample_bootorderspanspan-idexample_bootorderspanspecify-the-boot-order" aria-labelledby="span-idexample_bootorderspanspan-idexample_bootorderspanspecify-the-boot-order"></a><span data-ttu-id="929c9-352"><span id="example_bootorder"></span><span id="EXAMPLE_BOOTORDER"></span>指定启动顺序</span><span class="sxs-lookup"><span data-stu-id="929c9-352"><span id="example_bootorder"></span><span id="EXAMPLE_BOOTORDER"></span>Specify the boot order</span></span></h3>
+<p><span data-ttu-id="929c9-353">对于大于 4.5 GB 的图像，必须创建一个启动顺序文件，以确保启动文件位于映像的开头。</span><span class="sxs-lookup"><span data-stu-id="929c9-353">For images larger than 4.5 GB, you must create a boot order file to make sure that boot files are located at the beginning of the image.</span></span></p>
+<p><span data-ttu-id="929c9-354">文件排序规则如下所示：</span><span class="sxs-lookup"><span data-stu-id="929c9-354">The rules for file ordering are as follows:</span></span></p>
+<ul>
+<li><p><span data-ttu-id="929c9-355">顺序文件必须在 ANSI 中。</span><span class="sxs-lookup"><span data-stu-id="929c9-355">The order file must be in ANSI.</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-356">订单文件必须以新行结束。</span><span class="sxs-lookup"><span data-stu-id="929c9-356">The order file must end in a new line.</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-357">订单文件必须每行有一个文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-357">The order file must have one file per line.</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-358">必须相对于映像的根目录指定每个文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-358">Each file must be specified relative to the root of the image.</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-359">必须将每个文件指定为长文件名。</span><span class="sxs-lookup"><span data-stu-id="929c9-359">Each file must be specified as a long file name.</span></span> <span data-ttu-id="929c9-360">不允许使用短名称。</span><span class="sxs-lookup"><span data-stu-id="929c9-360">No short names are allowed.</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-361">每个文件路径的长度不能超过最大 _ 路径。</span><span class="sxs-lookup"><span data-stu-id="929c9-361">Each file path cannot be longer than MAX_PATH.</span></span> <span data-ttu-id="929c9-362">这包括卷名。</span><span class="sxs-lookup"><span data-stu-id="929c9-362">This includes the volume name.</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="929c9-363">例如，D： \ cdimage.exe 类似于以下 (其中 d 是 DVD 驱动器的驱动器号) ：</span><span class="sxs-lookup"><span data-stu-id="929c9-363">For example, D:\cdimage would resemble the following (where D is the drive letter of the DVD drive):</span></span></p>
+<ul>
+<li><p><span data-ttu-id="929c9-364">D： \ cdimage.exe \ 1 \1.txt</span><span class="sxs-lookup"><span data-stu-id="929c9-364">D:\cdimage\1\1.txt</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-365">D： \ cdimage.exe \ 2 \2.txt</span><span class="sxs-lookup"><span data-stu-id="929c9-365">D:\cdimage\2\2.txt</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-366">D： \ cdimage.exe \ 3 \3.txt</span><span class="sxs-lookup"><span data-stu-id="929c9-366">D:\cdimage\3\3.txt</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-367">D： \ cdimage.exe \ 3 \ 3 _5.txt</span><span class="sxs-lookup"><span data-stu-id="929c9-367">D:\cdimage\3\3_5.txt</span></span></p>
+</li>
+<li><p><span data-ttu-id="929c9-368">D： \ cdimage.exe \ <em>&lt; longFileName &gt;</em></span><span class="sxs-lookup"><span data-stu-id="929c9-368">D:\cdimage\<em>&lt;longFileName&gt;</em>.txt</span></span></p>
+</li>
+</ul>
+<p><span data-ttu-id="929c9-369"><strong>创建启动顺序文件</strong></span><span class="sxs-lookup"><span data-stu-id="929c9-369"><strong>To create a boot order file</strong></span></span></p>
+<ul>
+<li><p><span data-ttu-id="929c9-370">创建启动顺序文件。</span><span class="sxs-lookup"><span data-stu-id="929c9-370">Create a boot order file.</span></span> <span data-ttu-id="929c9-371">例如：</span><span class="sxs-lookup"><span data-stu-id="929c9-371">For example:</span></span></p>
+<div class="codeHeader" id="code-try-9" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre tabindex="0" class="has-inner-focus"><code data-author-content="Oscdimg -m -n -yoC:\temp\bootOrder.txt 
+-bC:\winpe_amd64\Efisys.bin C:\winpe_amd64\winpeamd64.iso
+">Oscdimg -m -n -yoC:\temp\bootOrder.txt 
+-bC:\winpe_amd64\Efisys.bin C:\winpe_amd64\winpeamd64.iso
+</code></pre>
+<p><span data-ttu-id="929c9-372">其中 BootOrder.txt 包含以下文件列表：</span><span class="sxs-lookup"><span data-stu-id="929c9-372">where BootOrder.txt contains the following list of files:</span></span></p>
+<div class="codeHeader" id="code-try-10" data-bi-name="code-header"><span class="language"></span><button type="button" class="action is-relative" data-bi-name="copy" aria-label="复制代码">
+				<span class="icon">
+					<span class="docon docon-edit-copy" role="presentation"></span>
+				</span>
+				<span>复制</span>
+				<div class="successful-copy-alert is-absolute has-right-zero has-top-zero has-left-zero has-bottom-zero is-flex has-flex-align-items-center has-flex-justify-content-center has-text-success-invert has-background-success is-transparent" aria-hidden="true">
+					<span class="icon is-size-large">
+						<span class="docon docon-check-mark" role="presentation"></span>
+					</span>
+				</div>
+			</button></div><pre tabindex="0" class="has-inner-focus"><code data-author-content="boot\bcd
+boot\boot.sdi
+boot\bootfix.bin
+boot\bootsect.exe
+boot\etfsboot.com
+boot\memtest.efi
+boot\memtest.exe
+boot\en-us\bootsect.exe.mui
+boot\fonts\chs_boot.ttf
+boot\fonts\cht_boot.ttf
+boot\fonts\jpn_boot.ttf
+boot\fonts\kor_boot.ttf
+boot\fonts\wgl4_boot.ttf
+sources\boot.wim
+">boot\bcd
+boot\boot.sdi
+boot\bootfix.bin
+boot\bootsect.exe
+boot\etfsboot.com
+boot\memtest.efi
+boot\memtest.exe
+boot\en-us\bootsect.exe.mui
+boot\fonts\chs_boot.ttf
+boot\fonts\cht_boot.ttf
+boot\fonts\jpn_boot.ttf
+boot\fonts\kor_boot.ttf
+boot\fonts\wgl4_boot.ttf
+sources\boot.wim
+</code></pre>
+</li>
+</ul>
+<h2 id="span-idrelated_topicsspanrelated-topics" class="heading-anchor"><a class="anchor-link docon docon-link" href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idrelated_topicsspanrelated-topics" aria-labelledby="span-idrelated_topicsspanrelated-topics"></a><span data-ttu-id="929c9-373"><span id="related_topics"></span>相关主题</span><span class="sxs-lookup"><span data-stu-id="929c9-373"><span id="related_topics"></span>Related topics</span></span></h2>
+<p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive" data-linktype="relative-path"><span data-ttu-id="929c9-374">WinPE：创建 USB 可启动驱动器</span><span class="sxs-lookup"><span data-stu-id="929c9-374">WinPE: Create USB Bootable drive</span></span></a></p>
+<p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/windows-deployment-command-line-tools-reference" data-linktype="relative-path"><span data-ttu-id="929c9-375">Windows 部署 Command-Line 工具参考</span><span class="sxs-lookup"><span data-stu-id="929c9-375">Windows Deployment Command-Line Tools Reference</span></span></a></p>
+
+						<!-- </content> -->
+
+						</main>
+
+						<!-- page rating section -->
+								<div class="is-hidden-desktop has-border-top has-margin-top-large has-padding-top-large binary-rating-holder">
+									
+	
+	
+
+	<div class="feedback-verbatim has-border-bottom has-padding-bottom-large has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+				<h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small is-size-h4 has-margin-bottom-medium">此页面有帮助吗?</h3>
+			<div>
+                <button class="thumb-rating like has-inner-focus" title="是" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>是</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus" title="否" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-desktop">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>否</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-desktop">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-desktop" class="visually-hidden">还有其他反馈吗？</label>
+                <textarea id="rating-textarea-desktop" rows="4" maxlength="999" placeholder="还有其他反馈吗？" required="" class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">跳过</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled="" type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>谢谢。</p>
+    </div>
+</div>									</div>
+						<!-- end page rating section -->
+
+
+						<!-- recommendations section -->
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="https://docs.microsoft.com/zh-cn/locale?target=https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text">中文 (简体)</span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu-interactive" aria-expanded="false" title="主题" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>主题</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start is-selected" data-theme-to="light" aria-pressed="true">
+					<span class="theme-light has-margin-right-small">
+						<span class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+亮					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="dark" aria-pressed="false">
+					<span class="theme-dark has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+暗					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+高对比度					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden=""></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/previous-versions/" data-bi-name="archivelink">旧版文档</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/teamblog" data-bi-name="bloglink">博客</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/contribute" data-bi-name="contributorGuide">参与</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">隐私和 Cookie</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/legal/termsofuse" data-bi-name="termsofuse">使用条款</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商标</a></li>
+		<li>© Microsoft 2021</li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div class="is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="页面操作">
+						<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable" style="width: 199.188px; top: 227px; bottom: 24px;">
+								
+	
+	
+
+	<div class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small" data-bi-name="rating">
+    <div class="binary-rating">
+        <div class="binary-rating-buttons">
+
+				<h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">此页面有帮助吗?</h3>
+			<div>
+                <button class="thumb-rating like has-inner-focus" title="是" data-bi-name="rating-yes" aria-expanded="false" data-bi-sat="1" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-like"></span>
+                    <span>是</span>
+                </button>
+                <button class="thumb-rating dislike has-inner-focus" title="否" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-controls="rating-container-mobile">
+                    <span aria-hidden="true" class="icon docon docon-dislike"></span>
+                    <span>否</span>
+                </button>
+            </div>
+        </div>
+        <form class="feedback-verbatim-form is-hidden" id="rating-container-mobile">
+            <div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-extra-small">
+                <label for="rating-textarea-mobile" class="visually-hidden">还有其他反馈吗？</label>
+                <textarea id="rating-textarea-mobile" rows="4" maxlength="999" placeholder="还有其他反馈吗？" required="" class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+            </div>
+            <div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+                <button class="skip-rating button is-transparent has-text-primary is-small has-border-none" type="button">跳过</button>
+                <button class="submit-rating button is-primary is-small" data-bi-name="rating-verbatim" disabled="" type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+    <div class="thankyou-rating is-hidden" tabindex="-1">
+        <p>谢谢。</p>
+    </div>
+</div>							<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="文章大纲">
+								<h3>本文内容</h3>
+							<ol><li class="selected"><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanspan-idoscdimg_command-line_optionsspanoscdimg-command-line-options">Oscdimg Command-Line 选项</a></li><li><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idexamplesspanspan-idexamplesspanexamples">示例</a></li><li><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options#span-idrelated_topicsspanrelated-topics">相关主题</a></li></ol></nav>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="https://docs.microsoft.com/zh-cn/locale?target=https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text">中文 (简体)</span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu" aria-expanded="false" title="主题" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>主题</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start is-selected" data-theme-to="light" aria-pressed="true">
+					<span class="theme-light has-margin-right-small">
+						<span class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+亮					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="dark" aria-pressed="false">
+					<span class="theme-dark has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+暗					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+高对比度					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden=""></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/previous-versions/" data-bi-name="archivelink">旧版文档</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/teamblog" data-bi-name="bloglink">博客</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/contribute" data-bi-name="contributorGuide">参与</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">隐私和 Cookie</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/legal/termsofuse" data-bi-name="termsofuse">使用条款</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商标</a></li>
+		<li>© Microsoft 2021</li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="操作面板" class="action-panel has-default-focus" tabindex="-1"></div>
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body></html>

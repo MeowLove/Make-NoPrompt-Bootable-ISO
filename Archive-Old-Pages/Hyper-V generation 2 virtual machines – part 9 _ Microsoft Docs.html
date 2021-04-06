@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9 -->
+<html class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus js-focus-visible theme-light" lang="en" dir="ltr" data-css-variable-support="true" data-authenticated="false" data-auth-status-determined="true" data-target="docs" x-ms-format-detection="none" data-js-focus-visible=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="Hyper-V generation 2 virtual machines – part 9">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://docs.microsoft.com/en-us/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@docsmsft">
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="archived_blog_id" content="345">
+<meta name="archived_blog_orig_url" content="https://blogs.technet.microsoft.com/jhoward">
+<meta name="archived_blog_post_author" content="John Howard -MSFT">
+<meta name="archived_blog_post_author_email" content="jhoward@microsoft.com">
+<meta name="archived_blog_post_id" content="1358">
+<meta name="author" content="kexugit">
+<meta name="breadcrumb_path" content="/archive/blogs/bread/toc.json">
+<meta name="depot_name" content="MSDN.blogs-archive">
+<meta name="document_id" content="31e0d040-3d84-1852-e9e9-f8acb2eb595e">
+<meta name="document_version_independent_id" content="45bdbb33-7be8-fac9-2e43-b76c485a6ff0">
+<meta name="gitcommit" content="https://docs-archive.visualstudio.com/DefaultCollection/docs-archive-project/_git/blogs-archive-pr/commit/b1e8e2636fecb5506007f86ab5aec32dc1eb4ffb?path=/blogs-archive/jhoward/hyper-v-generation-2-virtual-machines-part-9.md&amp;_a=contents">
+<meta name="is_archived" content="true">
+<meta name="locale" content="en-us">
+<meta name="ms.author" content="Archiveddocs">
+<meta name="ms.date" content="11/11/2013">
+<meta name="ms.topic" content="Archived">
+<meta name="original_content_git_url" content="https://docs-archive.visualstudio.com/DefaultCollection/docs-archive-project/_git/blogs-archive-pr?path=/blogs-archive/jhoward/hyper-v-generation-2-virtual-machines-part-9.md&amp;version=GBlive&amp;_a=contents">
+<meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
+<meta name="search.ms_docsetname" content="blogs-archive">
+<meta name="search.ms_product" content="MSDN">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="site_name" content="Docs">
+<meta name="uhfHeaderId" content="MSDocsHeader-Archive">
+<meta name="updated_at" content="2020-02-07 07:49 PM">
+<meta name="page_type" content="conceptual">
+<meta name="toc_rel" content="toc.json">
+<meta name="word_count" content="493">
+
+
+	<meta name="scope" content="Blogs">
+<link href="https://docs.microsoft.com/en-us/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9" rel="canonical">
+	<title>Hyper-V generation 2 virtual machines – part 9 | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/d84467c8.site-ltr.css">
+
+	
+
+
+	<script async="" defer="" crossorigin="anonymous" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/lux.js.下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/analytics.js.下載"></script><script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'zh-cn',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasBinaryRating: false,
+			hasGithubIssues: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			contentGitUrl: 'https://docs-archive.visualstudio.com/DefaultCollection/docs-archive-project/_git/blogs-archive-pr?path=/blogs-archive/jhoward/hyper-v-generation-2-virtual-machines-part-9.md&version=GBlive&_a=contents',
+			extendBreadcrumb: false,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasBookmark: true,
+			hasShare: true,
+			hasRecommendations: false,
+		},
+		functions:{}
+	};
+	</script>
+	<script src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/wcp-consent.js.下載"></script>
+	<script src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/ms.jsll-3.js.下載"></script>
+	<script>window.onedsAwa = window.awa; delete window.awa;</script>	
+	<script src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/jsll-4.js.下載"></script>
+	<script nomodule="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/bluebird.min.js.下載" integrity="sha384-aD4BDeDGeLXLpPK4yKeqtZQa9dv4a/7mQ+4L5vwshIYH1Mc2BrXvHd32iHzYCQy5" crossorigin="anonymous"></script>
+	<script nomodule="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/fetch.umd.min.js.下載" integrity="sha384-EQIXrC5K2+7X8nGgLkB995I0/6jfAvvyG1ieZ+WYGxgJHFMD/alsG9fSDWvzb5Y1" crossorigin="anonymous"></script>
+	<script nomodule="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/template.min.js.下載" integrity="sha384-1zKzI6ldTVHMU7n0W2HpE/lhHI+UG4D9IIaxbj3kT2UhCWicdTuJkTtnKuu0CQzN" crossorigin="anonymous"></script>
+	<script nomodule="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/url.min.js.下載" integrity="sha384-vn7xBMtpSTfzaTRWxj0kVq0UcsbBrTOgZ/M1ISHqe1V358elYva+lfiEC+T8jLPc" crossorigin="anonymous"></script>
+	<script src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/8a64e446.index-polyfills.js.下載"></script>
+		<script src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/qrious.min.js.下載" integrity="sha384-h/SmU/qxwYnRlzklg9PKWpDwyma9UmKuOB//Pz6Cov5KkEqcaFF0vod43/XhoeyJ" crossorigin="anonymous"></script>
+
+		<script src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/a4e7b023.index-docs.js.下載"></script><style></style>
+<script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js.下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(1).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(1).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(2).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js.下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(2).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(3).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(3).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(4).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(4).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(5).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(5).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(6).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(6).下載"></script><link type="text/css" rel="stylesheet" charset="UTF-8" href="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/translateelement.css"><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(7).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(7).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(8).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(8).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(9).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(9).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(10).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(10).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(11).下載"></script><script async="" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/t.js(11).下載"></script><script async="" src="https://web.vortex.data.microsoft.com/collect/v1/t.js?ver=%272.1%27&amp;name=%27Ms.Webi.ContentUpdate%27&amp;time=%272021-04-06T06%3A57%3A17.827Z%27&amp;os=%27Windows%27&amp;appId=%27JS%3ADocs%27&amp;-ver=%271.0%27&amp;-impressionGuid=%277fbd3447-ae1c-4b7a-ab1b-093d9bc0f046%27&amp;-pageName=%2731e0d040-3d84-1852-e9e9-f8acb2eb595e%27&amp;-uri=%27https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Farchive%2Fblogs%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9%27&amp;-market=%27zh-cn%27&amp;-pageTags=%27%7B%22author%22%3A%22kexugit%22%2C%22depotname%22%3A%22MSDN.blogs-archive%22%2C%22document_version_independent_id%22%3A%2245bdbb33-7be8-fac9-2e43-b76c485a6ff0%22%2C%22gitcommit%22%3A%22https%3A%2F%2Fdocs-archive.visualstudio.com%2FDefaultCollection%2Fdocs-archive-project%2F_git%2Fblogs-archive-pr%2Fcommit%2Fb1e8e2636fecb5506007f86ab5aec32dc1eb4ffb%3Fpath%3D%2Fblogs-archive%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9.md%26_a%3Dcontents%22%2C%22pgauth%22%3A%22Archiveddocs%22%2C%22date%22%3A%2211%2F11%2F2013%22%2C%22pgtop%22%3A%22Archived%22%2C%22giturl%22%3A%22https%3A%2F%2Fdocs-archive.visualstudio.com%2FDefaultCollection%2Fdocs-archive-project%2F_git%2Fblogs-archive-pr%3Fpath%3D%2Fblogs-archive%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9.md%26version%3DGBlive%26_a%3Dcontents%22%2C%22publishtime%22%3A%222020-02-07%2007%3A49%20PM%22%2C%22contentlocale%22%3A%22en-us%22%2C%22highContrast%22%3A%22false%22%2C%22metaTags%22%3A%7B%7D%7D%27&amp;-pageHeight=6330&amp;-vpHeight=1241&amp;-vpWidth=2560&amp;-actionType=%27R%27&amp;-behavior=0&amp;-vScrollOffset=0&amp;-hScrollOffset=0&amp;-contentVer=%272.0%27&amp;-content=%27%5B%5D%27&amp;*baseType=%27Ms.Content.ContentUpdate%27&amp;*title=%27Hyper-V%20generation%202%20virtual%20machines%20%E2%80%93%20part%209%20%7C%20Microsoft%20Docs%27&amp;*cookieEnabled=true&amp;*isJs=true&amp;*isDomComplete=false&amp;*isLoggedIn=false&amp;ext-javascript-ver=%271.1%27&amp;ext-javascript-libVer=%274.3.4%27&amp;ext-javascript-domain=%27docs.microsoft.com%27&amp;ext-javascript-userConsent=true&amp;ext-user-localId=%27t%3A135C1B0934E8600F1A6114CF35F96143%27&amp;$mscomCookies=false"></script><script async="" src="https://web.vortex.data.microsoft.com/collect/v1/t.js?ver=%272.1%27&amp;name=%27Ms.Webi.ContentUpdate%27&amp;time=%272021-04-06T06%3A57%3A17.827Z%27&amp;os=%27Windows%27&amp;appId=%27JS%3ADocs%27&amp;-ver=%271.0%27&amp;-impressionGuid=%277fbd3447-ae1c-4b7a-ab1b-093d9bc0f046%27&amp;-pageName=%2731e0d040-3d84-1852-e9e9-f8acb2eb595e%27&amp;-uri=%27https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Farchive%2Fblogs%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9%27&amp;-market=%27zh-cn%27&amp;-pageTags=%27%7B%22author%22%3A%22kexugit%22%2C%22depotname%22%3A%22MSDN.blogs-archive%22%2C%22document_version_independent_id%22%3A%2245bdbb33-7be8-fac9-2e43-b76c485a6ff0%22%2C%22gitcommit%22%3A%22https%3A%2F%2Fdocs-archive.visualstudio.com%2FDefaultCollection%2Fdocs-archive-project%2F_git%2Fblogs-archive-pr%2Fcommit%2Fb1e8e2636fecb5506007f86ab5aec32dc1eb4ffb%3Fpath%3D%2Fblogs-archive%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9.md%26_a%3Dcontents%22%2C%22pgauth%22%3A%22Archiveddocs%22%2C%22date%22%3A%2211%2F11%2F2013%22%2C%22pgtop%22%3A%22Archived%22%2C%22giturl%22%3A%22https%3A%2F%2Fdocs-archive.visualstudio.com%2FDefaultCollection%2Fdocs-archive-project%2F_git%2Fblogs-archive-pr%3Fpath%3D%2Fblogs-archive%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9.md%26version%3DGBlive%26_a%3Dcontents%22%2C%22publishtime%22%3A%222020-02-07%2007%3A49%20PM%22%2C%22contentlocale%22%3A%22en-us%22%2C%22highContrast%22%3A%22false%22%2C%22metaTags%22%3A%7B%7D%7D%27&amp;-pageHeight=6330&amp;-vpHeight=1241&amp;-vpWidth=2560&amp;-actionType=%27R%27&amp;-behavior=0&amp;-vScrollOffset=0&amp;-hScrollOffset=0&amp;-contentVer=%272.0%27&amp;-content=%27%5B%5D%27&amp;*baseType=%27Ms.Content.ContentUpdate%27&amp;*title=%27Hyper-V%20generation%202%20virtual%20machines%20%E2%80%93%20part%209%20%7C%20Microsoft%20Docs%27&amp;*cookieEnabled=true&amp;*isJs=true&amp;*isDomComplete=false&amp;*isLoggedIn=false&amp;ext-javascript-ver=%271.1%27&amp;ext-javascript-libVer=%274.3.4%27&amp;ext-javascript-domain=%27docs.microsoft.com%27&amp;ext-javascript-userConsent=true&amp;ext-user-localId=%27t%3A135C1B0934E8600F1A6114CF35F96143%27&amp;$mscomCookies=false"></script></head>
+
+<body lang="zh-cn" dir="ltr"><div style="display: none;" id="lightningjs-usabilla_live"><div><iframe frameborder="0" id="lightningjs-frame-usabilla_live" src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/saved_resource.html"></iframe></div></div>
+	<div class="header-holder has-default-focus">
+		<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused is-fixed has-inner-focus focus-visible has-top-zero has-left-zero has-right-zero has-padding-medium has-text-centered has-body-background-medium" tabindex="1">跳转至主内容</a>
+		
+		<div id="ignite-banner-holder" class="has-default-focus has-overflow-hidden"></div>
+		
+		<div hidden="" id="cookie-consent-holder"></div>
+		<!-- liquid-tag banners global -->
+		<div id="headerAreaHolder" data-bi-name="header">
+<header role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization"><!----> <div class="nav-bar"><!---->  <div class="nav-bar-brand">
+		<a class="nav-bar-button" itemprop="url" href="https://www.microsoft.com/" aria-label="Microsoft">
+			<div class="nav-bar-logo" role="presentation" aria-hidden="true" itemprop="logo" itemscope="itemscope">
+				<svg xmlns="http://www.w3.org/2000/svg" width="108" height="23" viewBox="72 72 337 74" preserveAspectRatio="xMidYMin slice">
+					<g data-name="MS-symbol">
+						<clippath id="a">
+							<path transform="matrix(1 0 0 -1 0 216)" d="M0 216h482V0H0z"></path>
+						</clippath>
+						<g clip-path="url(#a)">
+							<path class="has-fill-current-color has-text-subtle" d="M394.942 104.59h-10.858v25.003h-7.38V104.59h-5.182v-5.965h5.182v-4.308c0-3.254 1.06-5.92 3.178-7.998 2.12-2.079 4.835-3.118 8.15-3.118.882 0 1.666.045 2.35.135a9.37 9.37 0 011.806.407v6.296c-.24-.14-.663-.31-1.265-.512-.603-.2-1.296-.3-2.078-.3-1.528 0-2.702.476-3.526 1.43-.824.954-1.235 2.365-1.235 4.232v3.736h10.858v-6.959l7.321-2.229v9.188h7.381v5.965h-7.38v14.49c0 1.91.345 3.254 1.038 4.037.693.783 1.782 1.175 3.27 1.175.42 0 .927-.1 1.52-.3a7.178 7.178 0 001.552-.724v6.025c-.463.261-1.23.502-2.305.723a15.742 15.742 0 01-3.178.331c-3.073 0-5.378-.817-6.914-2.455-1.537-1.637-2.305-4.102-2.305-7.396zm-48.407 9.73c0 3.233.733 5.703 2.2 7.411 1.465 1.707 3.564 2.56 6.295 2.56 2.652 0 4.67-.853 6.055-2.56 1.386-1.708 2.08-4.238 2.08-7.592 0-3.334-.719-5.849-2.155-7.547-1.436-1.697-3.45-2.545-6.04-2.545-2.67 0-4.745.888-6.22 2.666-1.477 1.777-2.215 4.313-2.215 7.607m-7.592.24c0-5.12 1.446-9.177 4.338-12.17 2.892-2.993 6.91-4.489 12.05-4.489 4.841 0 8.621 1.441 11.343 4.323 2.721 2.883 4.082 6.774 4.082 11.674 0 5.021-1.447 9.018-4.338 11.99-2.892 2.973-6.829 4.458-11.81 4.458-4.8 0-8.61-1.41-11.432-4.232-2.822-2.82-4.233-6.673-4.233-11.554m-16.417-7.802c0 1.045.331 1.863.994 2.456.662.592 2.128 1.34 4.398 2.243 2.912 1.166 4.956 2.476 6.131 3.932 1.175 1.456 1.762 3.22 1.762 5.287 0 2.912-1.12 5.252-3.359 7.02-2.24 1.767-5.267 2.65-9.083 2.65-1.285 0-2.706-.155-4.263-.467-1.556-.31-2.877-.707-3.96-1.19v-7.169a17.945 17.945 0 004.277 2.198c1.526.543 2.911.814 4.157.814 1.647 0 2.862-.23 3.645-.693.784-.46 1.175-1.235 1.175-2.319 0-1.005-.406-1.853-1.22-2.546-.813-.693-2.355-1.492-4.624-2.395-2.69-1.125-4.599-2.39-5.724-3.796-1.125-1.406-1.687-3.193-1.687-5.362 0-2.792 1.11-5.086 3.33-6.884 2.217-1.797 5.095-2.696 8.63-2.696 1.084 0 2.3.12 3.645.361 1.346.242 2.47.553 3.374.934v6.93c-.964-.644-2.089-1.195-3.374-1.658-1.286-.462-2.56-.693-3.826-.693-1.386 0-2.465.271-3.238.813-.774.543-1.16 1.286-1.16 2.23m-35.066 7.562c0 3.233.733 5.703 2.2 7.411 1.465 1.707 3.564 2.56 6.295 2.56 2.652 0 4.67-.853 6.055-2.56 1.386-1.708 2.08-4.238 2.08-7.592 0-3.334-.719-5.849-2.155-7.547-1.436-1.697-3.449-2.545-6.039-2.545-2.672 0-4.745.888-6.222 2.666-1.476 1.777-2.214 4.313-2.214 7.607m-7.592.24c0-5.12 1.446-9.177 4.338-12.17 2.893-2.993 6.91-4.489 12.051-4.489 4.84 0 8.621 1.441 11.342 4.323 2.721 2.883 4.082 6.774 4.082 11.674 0 5.021-1.446 9.018-4.338 11.99-2.892 2.973-6.828 4.458-11.809 4.458-4.8 0-8.61-1.41-11.433-4.232-2.822-2.82-4.233-6.673-4.233-11.554m-3.136-16.448c.582 0 1.105.041 1.567.121.462.08.853.18 1.175.301v7.38c-.382-.28-.939-.546-1.672-.798-.733-.25-1.622-.376-2.666-.376-1.788 0-3.299.753-4.534 2.26-1.235 1.505-1.853 3.825-1.853 6.958v15.635h-7.29V98.624h7.29v4.88h.12c.663-1.687 1.667-3.007 3.013-3.96 1.346-.954 2.962-1.432 4.85-1.432m-27.956 26.18c1.084 0 2.28-.25 3.585-.754a15.06 15.06 0 003.615-1.988v6.778c-1.165.663-2.485 1.165-3.962 1.506-1.475.342-3.098.512-4.865.512-4.559 0-8.265-1.44-11.116-4.323-2.852-2.88-4.278-6.562-4.278-11.04 0-4.98 1.456-9.083 4.37-12.307 2.91-3.224 7.037-4.835 12.38-4.835 1.366 0 2.746.176 4.143.527 1.395.352 2.504.758 3.328 1.22v6.99c-1.125-.824-2.274-1.462-3.45-1.914a9.966 9.966 0 00-3.599-.678c-2.872 0-5.192.934-6.959 2.802-1.768 1.868-2.652 4.388-2.652 7.562 0 3.132.85 5.573 2.546 7.32 1.697 1.748 4.002 2.621 6.914 2.621m-22.112 5.302h-7.29V98.624h7.29zm-8.044-39.916c0-1.205.437-2.214 1.311-3.028.874-.813 1.913-1.22 3.118-1.22 1.285 0 2.35.417 3.193 1.25.844.834 1.266 1.833 1.266 2.998 0 1.185-.432 2.18-1.296 2.982-.864.804-1.918 1.205-3.163 1.205-1.246 0-2.295-.406-3.148-1.219-.854-.815-1.28-1.803-1.28-2.968m-6.274-3.284v43.2h-7.5v-33.86h-.12l-13.408 33.86h-4.97l-13.738-33.86h-.09v33.86h-6.929v-43.2h10.755l12.412 32.024h.18l13.105-32.024z"></path>
+							<path d="M106.214 106.214H71.996V71.996h34.218z" fill="#f25022"></path>
+							<path d="M143.993 106.214h-34.218V71.996h34.218z" fill="#7fba00"></path>
+							<path d="M106.214 143.993H71.996v-34.218h34.218z" fill="#00a4ef"></path>
+							<path d="M143.993 143.993h-34.218v-34.218h34.218z" fill="#ffb900"></path>
+						</g>
+					</g>
+				</svg>
+			</div>
+		</a>
+	</div> 
+				
+		<div class="nav-bar-item is-hidden-tablet">
+			<div class="nav-bar-menu">
+				<button class="nav-bar-button is-title" title="全球导航" aria-expanded="false">
+					<span class="nav-bar-menu-title"><!---->文档<!----></span>
+					<div class="nav-bar-burger">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span class="nav-bar-burger-label"><!---->全球导航<!----></span>
+					</div>
+				</button>
+			</div>
+		</div>
+	
+				
+		<nav class="nav-bar-nav" role="navigation" aria-label="全球">
+			<ul class="nav-bar-nav-list">
+				
+		<li class="nav-bar-item is-category">
+			<a class="nav-bar-button is-title has-hover-underline" itemprop="url" href="https://docs.microsoft.com/zh-cn/">
+				<span><!---->Docs<!----></span>
+			</a>
+		</li>
+	
+				<!----> <li class="nav-bar-item">
+				<a class=" nav-bar-button has-hover-underline is-active" href="https://docs.microsoft.com/zh-cn/documentation">
+					<span><!---->文档<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class=" nav-bar-button has-hover-underline " href="https://docs.microsoft.com/zh-cn/learn/">
+					<span><!---->Learn<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class=" nav-bar-button has-hover-underline " href="https://docs.microsoft.com/zh-cn/answers/products/">
+					<span><!---->Q&amp;A<!----></span>
+				</a>
+		  </li><!----> <li class="nav-bar-item">
+				<a class=" nav-bar-button has-hover-underline " href="https://docs.microsoft.com/zh-cn/samples/browse/">
+					<span><!---->代码示例<!----></span>
+				</a>
+		  </li><!----> <li class="dropdown nav-bar-item" hidden="">
+		<button aria-expanded="false" class="dropdown-trigger nav-bar-button  has-hover-underline" aria-controls="ax-37">
+			<span><!---->更多<!----></span>
+			<span class="nav-bar-button-chevron" aria-hidden="true">
+				<span class="docon docon-chevron-down-light expanded-indicator"></span>
+			</span>
+		</button>
+		<ul class="dropdown-menu" id="ax-37" aria-label="更多">
+			<!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button is-active" href="https://docs.microsoft.com/zh-cn/documentation"><!---->文档<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://docs.microsoft.com/zh-cn/learn/"><!---->Learn<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://docs.microsoft.com/zh-cn/answers/products/"><!---->Q&amp;A<!----></a>
+				</li>
+		  <!---->
+				<li class="nav-bar-item" hidden="">
+					<a class=" nav-bar-button " href="https://docs.microsoft.com/zh-cn/samples/browse/"><!---->代码示例<!----></a>
+				</li>
+		  <!---->
+		</ul>
+	</li><!---->
+			</ul>
+		</nav>
+	
+				<span class="nav-bar-spacer"></span>
+				
+		<div class="nav-bar-search " id="ax-38" hidden="">
+			
+		<form class="nav-bar-search-form" method="GET" name="nav-bar-search-form" role="search" id="nav-bar-search-form" aria-label="搜索" aria-expanded="false" action="https://docs.microsoft.com/zh-cn/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!----> <div class="control ">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="site-search-input" class="autocomplete-input input   is-small" type="search" name="terms" aria-expanded="false" aria-owns="ax-39-listbox" aria-activedescendant="" aria-label="搜索" placeholder="搜索以前的版本">
+
+				<span aria-hidden="true" class="icon is-small is-left" hidden="">
+					<span class="has-text-primary docon docon-undefined"></span>
+				</span>
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+			</div>
+
+			<ul class="autocomplete-suggestions is-vertically-scrollable" role="listbox" id="ax-39-listbox" aria-label="site-search-input-suggestions" hidden="">
+				
+			</ul><!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			<input name="scope" hidden="" value="Blogs">
+			<input name="dataSource" hidden="" value="previousVersions">
+			
+		</form>
+	
+		</div>
+		
+					<div class="nav-bar-search">
+						<!-- hidden when the width drops to tablet -->
+						
+		<form class="nav-bar-search-form" method="GET" name="nav-bar-search-form" role="search" id="nav-bar-search-form-desktop" aria-label="搜索" aria-expanded="false" action="https://docs.microsoft.com/zh-cn/search/">
+			<div class="autocomplete" data-bi-name="autocomplete"><!----> <div class="control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="ax-40" class="autocomplete-input input control has-icons-left  is-small" type="search" name="terms" aria-expanded="false" aria-owns="ax-41-listbox" aria-activedescendant="" aria-label="搜索" placeholder="搜索以前的版本">
+
+				<span aria-hidden="true" class="icon is-small is-left">
+					<span class="has-text-primary docon docon-search"></span>
+				</span>
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+			</div>
+
+			<ul class="autocomplete-suggestions is-vertically-scrollable" role="listbox" id="ax-41-listbox" aria-label="ax-40-suggestions" hidden="">
+				
+			</ul><!----></div>
+			<!-- mobile safari will not dispatch submit event unless there's a submit button that is not display:none -->
+			<button type="submit" class="visually-hidden" tabindex="-1" aria-hidden="true"></button>
+			<input name="category" hidden="" value="">
+			<input name="scope" hidden="" value="Blogs">
+			<input name="dataSource" hidden="" value="previousVersions">
+			
+		</form>
+	
+					</div>
+			  
+		<div class="nav-bar-search " hidden="">
+			<div class="nav-bar-search-form-expander">
+				<button id="form-expander" class="nav-bar-button has-hover-underline " title="搜索" aria-expanded="false" aria-controls="ax-38">
+					
+		<span class="is-visually-hidden-mobile"><!---->搜索<!----></span>
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-search"></span>
+		</span>
+	
+				</button>
+			</div>
+		</div>
+	
+				
+		<div class="nav-bar-profile">
+			
+		<a class="docs-sign-in auth-status-determined not-authenticated" href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9#"> 登录 </a>
+	 
+		<div class="dropdown has-caret auth-status-determined authenticated">
+			<button class="dropdown-trigger button-reset" aria-controls="user-menu" aria-expanded="false" aria-label="你的帐户">
+				<figure class="image is-36x36">
+					<img class="has-body-background-medium is-rounded" alt="" data-profile-property="avatarUrl">
+				</figure>
+			</button>
+			<div class="dropdown-menu box has-flex-justify-content-start has-body-background" id="user-menu" role="menu">
+				<div class="media is-user-dir">
+					<div class="media-left">
+						<figure class="image is-48x48" aria-hidden="true">
+							<img class="has-body-background-medium is-rounded" aria-labelledby="displayName" data-profile-property="avatarUrl">
+						</figure>
+					</div>
+					<div class="media-content">
+						<p class="title is-size-large">
+							<span id="displayName" class="is-inline-truncated has-max-width-200" data-profile-property="displayName"></span>
+						</p>
+						<p class="subtitle is-size-small has-margin-bottom-none">
+							<span class="is-inline-truncated has-max-width-200" data-profile-property="upn"></span>
+						</p>
+					</div>
+				</div>
+				<ul class="has-padding-top-small has-padding-bottom-medium">
+					<li class="has-padding-top-extra-small has-padding-bottom-extra-small">
+						<a href="https://docs.microsoft.com/profile" data-profile-property="profileUrl"><!---->配置文件<!----></a>
+					</li>
+					<li class="has-padding-top-extra-small has-padding-bottom-extra-small">
+						<a href="https://docs.microsoft.com/profile" data-profile-property="bookmarksUrl"><!---->书签<!----></a>
+					</li>
+					<li class="has-padding-top-extra-small has-padding-bottom-extra-small">
+						<a href="https://docs.microsoft.com/profile" data-profile-property="collectionsUrl"><!---->集合<!----></a>
+					</li>
+					<li class="has-padding-top-extra-small">
+						<a href="https://docs.microsoft.com/profile" data-profile-property="challengesUrl"><!---->挑战<!----></a>
+					</li>
+				</ul>
+				<div class="has-border-top has-padding-top-medium">
+					<a class="docs-sign-out" href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9#"><!---->注销<!----></a>
+				</div>
+			</div>
+		</div>
+	
+		</div>
+	
+			 <!----></div>  <!----></header>		</div>
+
+						<div class="content-header uhf-container has-padding has-default-focus has-border-bottom-none" data-bi-name="content-header">
+					<nav class="breadcrumb-holder has-padding-none has-padding-left-medium-tablet has-padding-right-medium-tablet has-padding-left-none-uhf-tablet has-padding-left-none-uhf-tablet has-padding-none-desktop has-flex-grow" data-bi-name="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="痕迹">
+						<ul id="page-breadcrumbs" class="breadcrumbs"><!----><!---->
+			<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+				
+							<a itemprop="item" href="https://docs.microsoft.com/zh-cn/">
+								<span itemprop="name"><!---->Docs<!----></span>
+							</a>
+					  
+				<meta itemprop="position" content="1">
+			</li>
+		<!---->
+			<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+				
+							<a itemprop="item" href="https://docs.microsoft.com/zh-cn/archive/blogs/">
+								<span itemprop="name"><!---->Blog Archive<!----></span>
+							</a>
+					  
+				<meta itemprop="position" content="2">
+			</li>
+		<!---->
+			<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+				
+							<a itemprop="item" href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward">
+								<span itemprop="name"><!---->John Howard - Senior Program Manager in the Hyper-V team at Microsoft<!----></span>
+							</a>
+					  
+				<meta itemprop="position" content="3">
+			</li>
+		<!----><!----></ul>
+					</nav>
+				<div class="content-header-controls">
+					<button type="button" class="contents-button button" data-bi-name="contents-expand" aria-haspopup="true">
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">目录</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>退出焦点模式</span>
+					</button>
+				</div>
+				<div class="has-padding-none-tablet has-padding-medium is-size-small is-flex-touch has-flex-justify-content-space-between-touch has-flex-grow page-action-holder">
+					<ul class="is-hidden-mobile action-list has-flex-justify-content-start has-flex-justify-content-end-tablet is-flex is-flex-row has-flex-wrap has-flex-grow is-unstyled">
+						<li>
+							<button type="button" class="bookmark button is-text has-inner-focus is-small is-icon-only-touch" data-list-type="bookmarks" data-bi-name="bookmark" title="添加 Hyper-V generation 2 virtual machines – part 9 | Microsoft Docs 的书签" aria-pressed="false">
+								<span class="icon" aria-hidden="true">
+									<span class="docon docon-single-bookmark"></span>
+								</span>
+								<span class="bookmark-status is-visually-hidden-touch is-hidden-portrait">书签</span>
+							</button>
+						</li>
+						<li>
+<div class="sharing dropdown has-caret">
+	<button class="dropdown-trigger button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small is-icon-only-touch" aria-controls="sharing-menu" aria-expanded="false" title="共享本文" data-bi-name="share">
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-sharing"></span>
+		</span>
+		<span class="is-visually-hidden-touch is-hidden-portrait">共享</span>
+	</button>
+	<div class="dropdown-menu has-padding-small" id="sharing-menu">
+		<ul data-bi-name="share-links">
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-twitter" data-bi-name="twitter" href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Farchive%2Fblogs%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9%3FWT.mc_id%3Dtwitter&amp;text=Hyper-V%20generation%202%20virtual%20machines%20%E2%80%93%20part%209%20%7C%20Microsoft%20Docs&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Farchive%2Fblogs%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9%3FWT.mc_id%3Dtwitter">
+					<span class="icon">
+						<span class="docon docon-brand-twitter has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-linkedin" data-bi-name="linkedin" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Farchive%2Fblogs%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9%3FWT.mc_id%3Dlinkedin">
+					<span class="icon">
+						<span class="docon docon-brand-linkedin has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>LinkedIn</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-facebook" data-bi-name="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Farchive%2Fblogs%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9%3FWT.mc_id%3Dfacebook">
+					<span class="icon">
+						<span class="docon docon-brand-facebook has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-email" data-bi-name="email" href="mailto:?subject=%5B%E5%85%B1%E4%BA%AB%E6%96%87%E7%AB%A0%5D%20Hyper-V%20generation%202%20virtual%20machines%20%E2%80%93%20part%209%20%7C%20Microsoft%20Docs&amp;body=Hyper-V%20generation%202%20virtual%20machines%20%E2%80%93%20part%209%20%7C%20Microsoft%20Docs%0A%0Ahttps%3A%2F%2Fdocs.microsoft.com%2Fzh-cn%2Farchive%2Fblogs%2Fjhoward%2Fhyper-v-generation-2-virtual-machines-part-9%3FWT.mc_id%3Demail">
+					<span class="icon">
+						<span class="docon docon-mail-message-fill has-text-primary" aria-hidden="true"></span>
+					</span>
+					<span>电子邮件</span>
+				</a>
+			</li>
+			<li>
+				<span class="button is-text is-fullwidth has-flex-justify-content-start has-inner-focus is-small share-wechat has-padding-top-extra-small has-padding-left-medium has-padding-right-medium">
+					<span class="icon">
+						<span class="docon docon-wechat has-text-primary" data-bi-name="wechat" aria-hidden="true"></span>
+					</span>
+					<span>微信</span>
+				</span>
+			</li>
+			<li>
+				<canvas class="qr-code" height="96" width="96"></canvas>
+			</li>
+		</ul>
+	</div>
+</div>						</li>
+					</ul>
+					<button type="button" class="has-border contents-button button is-small is-text is-hidden-tablet has-inner-focus" aria-label="目录" data-bi-name="contents-expand">
+						<span class="icon">
+							<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+						</span>
+						<span class="contents-expand-title">目录</span>
+					</button>
+					<div class="is-invisible"></div>
+					<div class="is-hidden-tablet level-item is-flexible level-right">
+						<button type="button" class="page-actions-button button is-small is-text is-hidden-tablet has-inner-focus has-border is-full-height  has-margin-left-small" aria-label="页面操作" data-bi-name="pageactions">
+							<span class="icon">
+								<span class="docon docon-more-vertical" aria-hidden="true"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus"><!----> <section data-dismissable="disappearing" class="is-info alert is-banner">
+			<div class="uhf-container">
+				<button data-dismiss="" type="button" class="delete is-absolute has-top-zero has-right-zero has-margin-extra-small is-large">
+					<span class="visually-hidden"><!---->消除警报<!----></span>
+				</button>
+				<div class="columns">
+					<div class="column is-12">
+						<div class="level">
+							<div class="level-left has-flex-shrink">
+								<div class="level-item has-flex-shrink">
+									<p class="has-text-white-static disclaimer-title has-margin-top-extra-small has-margin-right-medium has-line-height-reset">
+										<span class="icon">
+											<span class="docon docon-status-error-outline" aria-hidden="true"></span>
+										</span>
+										<span><!---->我们将不再定期更新此内容。 请查看 <a href="https://docs.microsoft.com/en-us/lifecycle/products">Microsoft 产品生命周期</a>，了解此产品、服务、技术或 API 的受支持情况。<!----></span>
+									</p>
+								</div>
+							</div>
+							 <div class="level-right has-margin-extra-small has-margin-none-tablet">
+				<div class="level-item has-flex-justify-content-start-mobile has-padding-small-tablet">
+					 <a href="https://docs.microsoft.com/" class="button is-info is-outlined is-small has-margin-left-extra-small has-margin-right-extra-small">
+					<span><!---->返回到主站点<!----></span>
+			  </a>
+				</div>
+		  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!----></div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-top-padding  has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="is-fixed is-flex is-flex-column" role="navigation" aria-label="主要" style="width: 364px; top: 176px; bottom: 24px;" data-bi-name="left toc"><form action="javascript:" role="search" aria-label="搜索" class="has-margin-bottom-small"><label class="visually-hidden" for="ax-35">搜索</label><div class="autocomplete is-block" data-bi-name="autocomplete"><!----> <div class="control has-icons-left">
+				<input role="combobox" maxlength="100" aria-autocomplete="list" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false" id="ax-35" class="autocomplete-input input control has-icons-left is-full-width is-small" type="text" aria-expanded="false" aria-owns="ax-36-listbox" aria-activedescendant="" placeholder="按标题筛选">
+
+				<span aria-hidden="true" class="icon is-small is-left">
+					<span class="has-text-primary docon docon-filter-settings"></span>
+				</span>
+
+				<span aria-hidden="true" class="autocomplete-loader loader has-text-primary " hidden=""></span>
+			</div>
+
+			<ul class="autocomplete-suggestions is-vertically-scrollable" role="listbox" id="ax-36-listbox" aria-label="ax-35-suggestions" hidden="">
+				
+			</ul><!----></div></form><ul class="tree is-vertically-scrollable has-flex-grow has-flex-shrink" role="tree" aria-label="目录" data-bi-name="tree" data-is-collapsible="true"><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="1" role="treeitem" tabindex="-1" id="title-1-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2014</span></li><li class="tree-item is-expanded" aria-setsize="11" aria-level="1" aria-posinset="2" role="treeitem" tabindex="-1" id="title-2-1" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2013</span><ul class="tree-group" role="group"><li class="tree-item is-expanded" aria-setsize="3" aria-level="2" aria-posinset="1" role="treeitem" tabindex="-1" id="title-2-1_1-2" aria-expanded="true"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>11</span><ul class="tree-group" role="group"><li role="none"><a aria-setsize="5" aria-level="3" aria-posinset="1" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-10">Hyper-V generation 2 virtual machines – part 10</a></li><li role="none"><a aria-setsize="5" aria-level="3" aria-posinset="2" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/windows-server-2012-r2-server-performance-tuning-guidelines">Windows Server 2012 R2 - Server Performance Tuning Guidelines</a></li><li role="none"><a aria-setsize="5" aria-level="3" aria-posinset="3" role="treeitem" tabindex="0" class="tree-item is-leaf has-external-link-indicator is-selected" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9" aria-current="page">Hyper-V generation 2 virtual machines – part 9</a></li><li role="none"><a aria-setsize="5" aria-level="3" aria-posinset="4" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-8">Hyper-V generation 2 virtual machines – part 8</a></li><li role="none"><a aria-setsize="5" aria-level="3" aria-posinset="5" role="treeitem" tabindex="-1" class="tree-item is-leaf has-external-link-indicator" data-bi-name="tree-leaf" href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-6">Hyper-V generation 2 virtual machines – part 6</a></li></ul></li><li class="tree-item" aria-setsize="3" aria-level="2" aria-posinset="2" role="treeitem" tabindex="-1" id="title-2-1_2-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>10</span></li><li class="tree-item" aria-setsize="3" aria-level="2" aria-posinset="3" role="treeitem" tabindex="-1" id="title-2-1_3-2" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>04</span></li></ul></li><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="3" role="treeitem" tabindex="-1" id="title-3-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2012</span></li><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="4" role="treeitem" tabindex="-1" id="title-4-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2011</span></li><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="5" role="treeitem" tabindex="-1" id="title-5-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2010</span></li><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="6" role="treeitem" tabindex="-1" id="title-6-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2009</span></li><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="7" role="treeitem" tabindex="-1" id="title-7-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2008</span></li><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="8" role="treeitem" tabindex="-1" id="title-8-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2007</span></li><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="9" role="treeitem" tabindex="-1" id="title-9-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2006</span></li><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="10" role="treeitem" tabindex="-1" id="title-10-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2005</span></li><li class="tree-item" aria-setsize="11" aria-level="1" aria-posinset="11" role="treeitem" tabindex="-1" id="title-11-1" aria-expanded="false"><span data-bi-name="tree-expander" class="tree-expander"><span class="tree-expander-indicator docon docon-chevron-right-light" aria-hidden="true"></span>2004</span></li></ul></nav>
+			</div>
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+
+					<main id="main" role="main" class="content " data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="hyper-v-generation-2-virtual-machines--part-9">Hyper-V generation 2 virtual machines – part 9</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="zh-cn" dir="ltr">
+							<li>
+								<time class="" data-article-date="" aria-label="文章评审日期" datetime="2013-11-11T00:00:00.000Z" data-article-date-source="ms.date">2013/11/11</time>
+							</li>
+									<li class="readingTime">2 分钟可看完</li>
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="文章大纲" hidden="">
+							<h3>本文内容</h3>
+						</nav>
+
+						<!-- <content> -->
+							<p><a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-1" data-linktype="relative-path">Part 1: Introduction to generation 2 virtual machines</a><br>
+<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-2" data-linktype="relative-path">Part 2: Networking and boot order</a><br>
+<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-3" data-linktype="relative-path">Part 3: Storage</a><br>
+<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-4" data-linktype="relative-path">Part 4: Keyboard for Windows 8 &amp; Windows Server 2012</a><br>
+<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-5" data-linktype="relative-path">Part 5: Kernel debugging</a><br>
+<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-6" data-linktype="relative-path">Part 6: Secure Boot</a><br>
+<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-7" data-linktype="relative-path">Part 7: FAQ</a><br>
+<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-8" data-linktype="relative-path">Part 8: Manually migrating generation 1 virtual machines to generation 2</a><br>
+<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9" data-linktype="relative-path">Part 9: Installing from ISO</a><br>
+<a href="https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-10" data-linktype="relative-path">Part 10: Utility for converting generation 1 virtual machines to generation 2 (Convert-VMGeneration)</a></p>
+<p>This part of the series on generation 2 virtual machines in Hyper-V talks booting from CD/DVD. It’s not specific to Hyper-V, it’s more about PCAT and EFI, and the way in which Windows installation media is built.</p>
+<p>Try the following – create a new generation 1 and generation 2 VMs with blank VHDXs, setting them both to boot from Windows 8 64-bit .ISO media, and start them.</p>
+<p>Here’s what you’ll see in a generation 1 virtual machine (or PCAT physical system)</p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/40/98/metablogapi/2553.clip_image002_4A6F6993.jpg" data-linktype="external"><img src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/4213.clip_image002_thumb_0CE20BCA.jpg" alt="clip_image002" title="clip_image002" data-linktype="external"></a></p>
+<p>And here’s what you’ll see in a generation 2 virtual machine (or EFI physical system)</p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/40/98/metablogapi/2072.clip_image004_65A7C294.jpg" data-linktype="external"><img src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/4456.clip_image004_thumb_6C5ACC17.jpg" alt="clip_image004" title="clip_image004" data-linktype="external"></a></p>
+<p>Before anyone comments, yes, we’re acutely aware that the generation 2 EFI boot loader messages persist on the screen and it can be a little confusing. Essentially what the generation 2 virtual machine did was:</p>
+<ul>
+<li>Attempt to boot from the CD SCSI device containing the Windows 8 ISO. This is where the ‘Press any key…’ message came from. As no key was pressed, we went to the next boot entry. (And this is where we didn’t clear the message from the EFI CD boot loader)</li>
+<li>I didn’t press F12 (in fact, this VM wasn’t connected to a network), so network boot failed</li>
+<li>The SCSI VHDX is raw with no partitioning or file system, so this too failed</li>
+</ul>
+<p>So why did the generation 1 virtual machine start setup from the Windows media? The answer is simply that it’s the way Windows media is built, and it’s inconsistent between the PCAT and EFI loaders.</p>
+<p>However, it’s relatively simple to solve if you want to avoid the press any key message. In fact, we almost have all the pieces from previous parts. In particular, part 4 where we injected keyboard drivers into the Windows 8 media.</p>
+<p>If you loopback mount Windows 8 or 8.1 RTM media, and navigate to the \efi\microsoft\boot directory, you will see there are two versions of cdboot.efi</p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/40/98/metablogapi/1325.clip_image006_07FF580E.jpg" data-linktype="external"><img src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/0743.clip_image006_thumb_75B6914B.jpg" alt="clip_image006" title="clip_image006" data-linktype="external"></a></p>
+<p>The default version, cdboot.efi prompts for a keypress. The unused version, cdboot_noprompt.efi doesn’t prompt.</p>
+<p>So it’s fairly simple to create modified media which uses the noprompt version. First, copy the contents of the ISO to a working directory, rename cdboot.efi to cdboot_prompt.efi, and rename cdboot_noprompt.efi to cdboot.efi.</p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/40/98/metablogapi/1832.clip_image008_4E7C4816.jpg" data-linktype="external"><img src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/6644.clip_image008_thumb_2337B10F.jpg" alt="clip_image008" title="clip_image008" data-linktype="external"></a></p>
+<p>Do the same with efisys.bin and efisys_prompt.bin</p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/40/98/metablogapi/3005.clip_image010_351444DC.jpg" data-linktype="external"><img src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/2746.clip_image010_thumb_22CB7E1A.jpg" alt="clip_image010" title="clip_image010" data-linktype="external"></a></p>
+<p>Then re-use our oscdimg command (in an elevated deployment and imaging tools environment) from part 4 to recreate the media.</p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/40/98/metablogapi/6153.clip_image011_6295649F.png" data-linktype="external"><img src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/6165.clip_image011_thumb_2C27434E.png" alt="clip_image011" title="clip_image011" data-linktype="external"></a></p>
+<p>Simply attach this modified media to the generation 2 VM and restart it (and don’t press any keys, not that you will be prompted…)</p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/40/98/metablogapi/8228.clip_image013_7DCDBDA0.jpg" data-linktype="external"><img src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/6082.clip_image013_thumb_27448F92.jpg" alt="clip_image013" title="clip_image013" data-linktype="external"></a></p>
+<p>The surprise awaits! It’s worth it – stay tuned for part 10.</p>
+<p>Cheers,<br>
+John.</p>
+
+						<!-- </content> -->
+
+						<div class="user-comments"><!----><!----><h2><!---->注释<!----></h2>
+		<ul class="has-margin-none ">
+			<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Anonymous<!----></div> <time class="is-block" datetime="2002-12-31T16:00:00.000Z"><!---->2003年1月1日<!----></time>
+						<div class="comment-body"><!---->This didn't work for me. I'm not sure what to try next. One thing I noticed is that I don't get the "Press any key to boot..." prompt at all. It just shows "Boot Failed. EFI SCSI Device.".
+I'm trying to install 8.1 in a Gen2 VM from a 32bit ISO.
+Any suggestions?<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<a class="has-text-weight-semibold" href="https://social.msdn.microsoft.com/profile/John%20Howard%20-MSFT"><!---->John Howard -MSFT<!----></a> <time class="is-block" datetime="2002-12-31T16:00:00.000Z"><!---->2003年1月1日<!----></time>
+						<div class="comment-body"><!---->Josh - This is expected - see the FAQ part, comment above, and/or the help text in the new VM wizard.<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<a class="has-text-weight-semibold" href="https://social.msdn.microsoft.com/profile/John%20Howard%20-MSFT"><!---->John Howard -MSFT<!----></a> <time class="is-block" datetime="2002-12-31T16:00:00.000Z"><!---->2003年1月1日<!----></time>
+						<div class="comment-body"><!---->That is expected. Generation 2 VMs only support 64-bit guest OS's, and for Windows, Windows 8/Windows Server 2012 and later. See the FAQ article for more information.<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->L.<!----></div> <time class="is-block" datetime="2013-11-11T13:57:14.000Z"><!---->2013年11月11日<!----></time>
+						<div class="comment-body"><!----><p>What about creating the disk image offline, e.g. using wim2vhd/Convert-WindowsImage? &nbsp;Is there something to known for gen2 VMs?</p>
+<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<a class="has-text-weight-semibold" href="https://social.msdn.microsoft.com/profile/John%20Howard%20-MSFT"><!---->John Howard -MSFT<!----></a> <time class="is-block" datetime="2013-11-11T14:38:57.000Z"><!---->2013年11月11日<!----></time>
+						<div class="comment-body"><!----><p>WIM2VHD (assuming it has been publically updated to allow for UEFI machines, I'm not sure it does yet) doesn't go through the CD path so this post isn't relevant there.</p>
+<p>However, I would not recommend you use WIM2VHD if for no other reason that it does not layout partitions using the recommended steps, and further (at least in the case of BIOS/PCAT machines) doesn't, to the best of my knowledge, setup the recovery environment. I personally would recommend you use the approved tools and processes from the ADK for deployment in production environments. For test, WIM2VHD may be fine though.</p>
+<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->PetriRiihikallio<!----></div> <time class="is-block" datetime="2013-11-12T10:59:44.000Z"><!---->2013年11月12日<!----></time>
+						<div class="comment-body"><!----><p>Thanks! This was what I was waiting for.</p>
+<p>Too bad the solution requires copying the ISO image, since it is such a slow</p>
+<p>procedure. Yes, I know it only needs to be done once, but in an automated workflow</p>
+<p>it is difficult to determine whether an image has been "fixed" or not.</p>
+<p>It would be nice to understand why the provided installation media is created the</p>
+<p>way it is. Why would someone want different boot options depending on BIOS vs. EFI.</p>
+<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<a class="has-text-weight-semibold" href="https://social.msdn.microsoft.com/profile/John%20Howard%20-MSFT"><!---->John Howard -MSFT<!----></a> <time class="is-block" datetime="2013-11-12T11:05:09.000Z"><!---->2013年11月12日<!----></time>
+						<div class="comment-body"><!----><p>That's a great question, but one I still haven't got to the bottom of when asking around. I think it's more historical than anything else - I don't believe there's a good reason, or at least not one I have found yet, just the way the media was created by who-ever put it together originally.</p>
+<p>Thanks,</p>
+<p>John.</p>
+<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Anon<!----></div> <time class="is-block" datetime="2013-11-12T19:16:23.000Z"><!---->2013年11月13日<!----></time>
+						<div class="comment-body"><!----><p>Why it's not a default?</p>
+<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<a class="has-text-weight-semibold" href="https://social.msdn.microsoft.com/profile/John%20Howard%20-MSFT"><!---->John Howard -MSFT<!----></a> <time class="is-block" datetime="2013-11-12T20:13:35.000Z"><!---->2013年11月13日<!----></time>
+						<div class="comment-body"><!----><p>As I put above, I don't know. Lost in history but I will do some digging. Suspect it was like that on IA64 and just carried across when EFI support came into x64</p>
+<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->OZ<!----></div> <time class="is-block" datetime="2013-12-05T07:32:58.000Z"><!---->2013年12月5日<!----></time>
+						<div class="comment-body"><!----><p>Thank you very much for your article without whom I would have wasted my time...</p>
+<p>Why make it simple when it can be complicated!</p>
+<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->William L.<!----></div> <time class="is-block" datetime="2013-12-05T18:05:22.000Z"><!---->2013年12月6日<!----></time>
+						<div class="comment-body"><!----><p>I've Create another method to solve it if I don't bother anyone please go to <a href="http://bit.ly/1d0hAIT">http://bit.ly/1d0hAIT</a>, thank you so much, and thank you for your blog</p>
+<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Anonymous<!----></div> <time class="is-block" datetime="2014-01-04T07:22:47.000Z"><!---->2014年1月4日<!----></time>
+						<div class="comment-body"><!---->The comment has been removed<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Anonymous<!----></div> <time class="is-block" datetime="2014-01-04T07:27:28.000Z"><!---->2014年1月4日<!----></time>
+						<div class="comment-body"><!---->The comment has been removed<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Anonymous<!----></div> <time class="is-block" datetime="2014-01-04T07:29:31.000Z"><!---->2014年1月4日<!----></time>
+						<div class="comment-body"><!---->The comment has been removed<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Anonymous<!----></div> <time class="is-block" datetime="2014-01-04T07:32:47.000Z"><!---->2014年1月4日<!----></time>
+						<div class="comment-body"><!---->The comment has been removed<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Anonymous<!----></div> <time class="is-block" datetime="2014-01-04T07:38:09.000Z"><!---->2014年1月4日<!----></time>
+						<div class="comment-body"><!---->The comment has been removed<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<a class="has-text-weight-semibold" href="https://social.msdn.microsoft.com/profile/Josh"><!---->Josh<!----></a> <time class="is-block" datetime="2014-01-23T05:34:58.000Z"><!---->2014年1月23日<!----></time>
+						<div class="comment-body"><!---->I am trying to install windows server 2008 R2 and this too failed. <!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Toddy Out West<!----></div> <time class="is-block" datetime="2014-01-25T12:55:47.000Z"><!---->2014年1月25日<!----></time>
+						<div class="comment-body"><!---->William L.'s solution was MUCH easier, faster, and more practical for me.
+
+And it took me all of one minute.  THANK YOU SO VERY MUCH WILLIAM L. ! ! !<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Uwe<!----></div> <time class="is-block" datetime="2014-03-17T12:26:38.000Z"><!---->2014年3月17日<!----></time>
+						<div class="comment-body"><!---->This is a fault of the Version 2 VM. If you install with a standard ISO on hardware, UEFI presents you with the option to "EFI boot" from the media.<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Uwe<!----></div> <time class="is-block" datetime="2014-03-17T12:33:24.000Z"><!---->2014年3月17日<!----></time>
+						<div class="comment-body"><!---->Goto firmware and set the DVD as first boot device (as the target article in Williams post from 6th of December describes in Spanish). This way it works with the original media.<!----></div>
+						
+					</li>
+				<!---->
+					<li class="has-padding-bottom-small has-padding-top-small has-border-top">
+						<div class="is-inline has-text-weight-semibold"><!---->Anonymous<!----></div> <time class="is-block" datetime="2014-04-16T10:02:09.000Z"><!---->2014年4月16日<!----></time>
+						<div class="comment-body"><!---->The comment has been removed<!----></div>
+						
+					</li>
+				<!---->
+		</ul><!----></div></main>
+
+						<!-- page rating section -->
+						<!-- end page rating section -->
+
+
+						<!-- recommendations section -->
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="https://docs.microsoft.com/zh-cn/locale?target=https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text">中文 (简体)</span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu-interactive" aria-expanded="false" title="主题" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>主题</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start is-selected" data-theme-to="light" aria-pressed="true">
+					<span class="theme-light has-margin-right-small">
+						<span class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+亮					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="dark" aria-pressed="false">
+					<span class="theme-dark has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+暗					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+高对比度					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden=""></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/previous-versions/" data-bi-name="archivelink">旧版文档</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/teamblog" data-bi-name="bloglink">博客</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/contribute" data-bi-name="contributorGuide">参与</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">隐私和 Cookie</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/legal/termsofuse" data-bi-name="termsofuse">使用条款</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商标</a></li>
+		<li>© Microsoft 2021</li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div class="is-size-small right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="页面操作">
+						<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable" style="width: 199.188px; top: 176px; bottom: 24px;">
+							<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="文章大纲" hidden="">
+								<h3>本文内容</h3>
+							</nav>
+						</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <div class="is-flex is-full-height has-padding-right-extra-large-desktop">
+			<a data-mscc-ic="false" class="locale-selector-link has-flex-shrink-none" href="https://docs.microsoft.com/zh-cn/locale?target=https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9" data-bi-name="select-locale"><span class="icon docon docon-world is-size-large has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text">中文 (简体)</span></a>
+		<div class="has-margin-left-medium has-margin-right-medium has-flex-shrink-none">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button is-transparent is-small is-icon-only-touch has-inner-focus theme-dropdown-trigger" aria-controls="theme-menu" aria-expanded="false" title="主题" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>主题</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector has-padding-small">
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start is-selected" data-theme-to="light" aria-pressed="true">
+					<span class="theme-light has-margin-right-small">
+						<span class="theme-selector-icon css-variable-support has-border is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+亮					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="dark" aria-pressed="false">
+					<span class="theme-dark has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+暗					</span>
+				</button>
+			</li>
+			<li class="theme is-block">
+				<button class="button is-text is-small theme-control is-fullwidth has-flex-justify-content-start" data-theme-to="high-contrast" aria-pressed="false">
+					<span class="theme-high-contrast has-margin-right-small">
+						<span class="has-border theme-selector-icon css-variable-support is-inline-block has-body-background" aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background"></rect>
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary"></rect>
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary"></rect>
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary"></rect>
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary"></rect>
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary"></rect>
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary"></rect>
+							</svg>
+						</span>
+					</span>
+					<span role="menuitem">
+高对比度					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>		</div>
+	</div>
+    <ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden=""></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/previous-versions/" data-bi-name="archivelink">旧版文档</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/teamblog" data-bi-name="bloglink">博客</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/contribute" data-bi-name="contributorGuide">参与</a></li>
+				<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">隐私和 Cookie</a></li>
+			<li><a data-mscc-ic="false" href="https://docs.microsoft.com/zh-cn/legal/termsofuse" data-bi-name="termsofuse">使用条款</a></li>
+			<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">商标</a></li>
+		<li>© Microsoft 2021</li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="操作面板" class="action-panel has-default-focus" tabindex="-1"></div>
+
+
+<div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="./Hyper-V generation 2 virtual machines – part 9 _ Microsoft Docs_files/translate_24dp.png" width="20" height="20" alt="Google 翻譯"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">原文</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">建議更好的譯法</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div class="status-message" style="display: none;"></div></div><div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle></svg></div></div></body></html>
