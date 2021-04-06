@@ -47,6 +47,13 @@ CXT从Windows 20H2 x64中提取的，一般是兼容的。
 
 <br>
 
+## [CXT - Enjoy Life | 生活、技术、交友、分享](https://www.cxthhhhh.com/)
+
+- [CXT 社区 | 系统 服务器 玩家](https://bbs.cxthhhhh.com)
+- [Telegram 组群 Technical Blog | 技術博客](https://t.me/Technical_Blog)
+- [Telegram 频道 My Share](https://t.me/me_share)
+<br>
+
 # Reference and mention：
 [Oscdimg Command-Line 选项](https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/oscdimg-command-line-options)
 [Microsoft official technical documents](https://docs.microsoft.com/zh-cn/archive/blogs/jhoward/hyper-v-generation-2-virtual-machines-part-9)
