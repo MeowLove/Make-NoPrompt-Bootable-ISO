@@ -9,7 +9,7 @@
     制作一个无需按键直接启动的Windows操作系统ISO。  <br> （Make a NoPrompt Bootable Windows ISO.  ） <br><br>
   </h3>
   <h3 align="center">
-    禁用和去除Windows操作系统“按任意键从光盘或数字视盘启动”工具。    <br> （Disable and Remove Windows ISO "Press any key to boot form CD or DVD" Tools.   ） <br><br>
+    禁用和去除Windows操作系统“按任意键从光盘或数字视盘启动”工具。    <br> （Disable and Remove Windows ISO "Press any key to boot from CD or DVD" Tools.   ） <br><br>
   </h3>
  
 
